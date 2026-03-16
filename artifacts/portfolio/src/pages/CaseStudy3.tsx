@@ -6,7 +6,7 @@ import { useDocumentMeta } from "@/hooks/useDocumentMeta";
 
 export default function CaseStudy3() {
   useDocumentMeta({
-    title: "UpGrad & Google Case Study — Dheeraj Chowdhary",
+    title: "Google Partnership Case Study — Dheeraj Chowdhary",
     description: "How I built an Android development program with Google from scratch, scaled to 5,000+ learners, then led the data-driven decision to sunset it."
   });
   const fadeUp = {
@@ -25,15 +25,14 @@ export default function CaseStudy3() {
           
           <header className="space-y-6">
             <div className="flex flex-wrap items-center gap-3">
-              <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 text-sm py-1 px-3">UpGrad</Badge>
+              <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 text-sm py-1 px-3">$2.25B Edtech Unicorn</Badge>
               <span className="text-muted-foreground font-medium">Product Manager</span>
-              <span className="text-muted-foreground font-medium">2016-2017</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground leading-[1.1]">
               Building with Google — Then Knowing When to Stop
             </h1>
             <p className="text-2xl font-medium italic text-muted-foreground border-l-4 border-primary pl-6 py-2">
-              "At UpGrad, I was hired to build their Android Development program from a blank page."
+              "I was hired to build the Android Development program from a blank page."
             </p>
           </header>
 
@@ -54,7 +53,7 @@ export default function CaseStudy3() {
                 </h2>
                 <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
                   <p>
-                    UpGrad (a $2.25B edtech unicorn) wanted to launch a professional Android development program. But there was nothing there yet.
+                    A $2.25B edtech unicorn wanted to launch a professional Android development program. But there was nothing there yet.
                   </p>
                   <p>
                     There was no existing curriculum, no mentor network, no brand partnerships, and no students. I was tasked to own the full product lifecycle, from initial business case all the way through go-to-market.
@@ -68,7 +67,7 @@ export default function CaseStudy3() {
                 </h2>
                 <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
                   <p>
-                    <strong>Greenfield Build:</strong> I built the business case from market research and P&L modeling. Crucially, I secured Google as a partner—making us one of only six national partners in India.
+                    <strong>Greenfield Build:</strong> I built the business case from market research and P&L modeling. Crucially, I secured Google as a partner — making us one of only six national partners in India.
                   </p>
                   <p>
                     <strong>Product Ownership:</strong> I owned all product decisions: the curriculum structure, pricing, class sizes, synchronous vs. asynchronous delivery ratios, and the mentor network. I coordinated a 20-person cross-functional team across content, video production, marketing, and sales to launch.

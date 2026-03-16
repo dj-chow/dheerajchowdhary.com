@@ -1,6 +1,6 @@
 import { ReactNode, useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Linkedin, Mail, ExternalLink } from "lucide-react";
+import { Menu, X, Linkedin, Mail, ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface LayoutProps {
@@ -83,6 +83,15 @@ export default function Layout({ children }: LayoutProps) {
               >
                 <Linkedin className="w-5 h-5" />
               </a>
+              <a
+                href="https://github.com/dj-chow"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="GitHub"
+              >
+                <Github className="w-5 h-5" />
+              </a>
               <Button asChild size="sm" className="rounded-full px-5 shadow-lg shadow-primary/20 hover:-translate-y-0.5 transition-all">
                 <Link href="/contact">Get in Touch</Link>
               </Button>
@@ -128,6 +137,14 @@ export default function Layout({ children }: LayoutProps) {
               <Linkedin className="w-6 h-6" /> LinkedIn Profile
             </a>
             <a
+              href="https://github.com/dj-chow"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 text-lg text-muted-foreground hover:text-primary"
+            >
+              <Github className="w-6 h-6" /> GitHub Profile
+            </a>
+            <a
               href="mailto:dheeraj@hey.com"
               className="flex items-center gap-3 text-lg text-muted-foreground hover:text-primary"
             >
@@ -160,6 +177,14 @@ export default function Layout({ children }: LayoutProps) {
               className="text-muted-foreground hover:text-primary flex items-center gap-1 text-sm font-medium transition-colors"
             >
               LinkedIn <ExternalLink className="w-3 h-3" />
+            </a>
+            <a
+              href="https://github.com/dj-chow"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary flex items-center gap-1 text-sm font-medium transition-colors"
+            >
+              GitHub <ExternalLink className="w-3 h-3" />
             </a>
             <a
               href="mailto:dheeraj@hey.com"

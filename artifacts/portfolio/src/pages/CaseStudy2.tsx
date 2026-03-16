@@ -6,8 +6,8 @@ import { useDocumentMeta } from "@/hooks/useDocumentMeta";
 
 export default function CaseStudy2() {
   useDocumentMeta({
-    title: "FRTB Program Case Study — Dheeraj Chowdhary",
-    description: "How I resolved 10 critical design decisions across 6 delivery teams on a $20M+ regulatory program at BMO."
+    title: "Regulatory Program Case Study — Dheeraj Chowdhary",
+    description: "How I resolved 10 critical design decisions across 6 delivery teams on a $20M+ regulatory program at a top North American bank."
   });
   const fadeUp = {
     hidden: { opacity: 0, y: 20 },
@@ -25,9 +25,8 @@ export default function CaseStudy2() {
           
           <header className="space-y-6">
             <div className="flex flex-wrap items-center gap-3">
-              <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 text-sm py-1 px-3">Bank of Montreal</Badge>
+              <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 text-sm py-1 px-3">Top 10 North American Bank</Badge>
               <span className="text-muted-foreground font-medium">Solution Architect</span>
-              <span className="text-muted-foreground font-medium">2021-2024</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground leading-[1.1]">
               Resolving 10 Critical Decisions on a $20M+ Program
@@ -68,7 +67,7 @@ export default function CaseStudy2() {
                 </h2>
                 <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
                   <p>
-                    <strong>Built Coalitions:</strong> I replaced the siloed decision-making process with Joint Analysis and Design (JAD) sessions, forcing all affected parties—front office, risk, and tech—into the same room to hash out dependencies.
+                    <strong>Built Coalitions:</strong> I replaced the siloed decision-making process with Joint Analysis and Design (JAD) sessions, forcing all affected parties — front office, risk, and tech — into the same room to hash out dependencies.
                   </p>
                   <p>
                     <strong>Authored the Specs:</strong> For the complex trade decomposition feature, I embedded directly with front office users. I traced the data flows end-to-end as a newcomer, learned their workflows, and translated that reality into execution specs for all six delivery teams.

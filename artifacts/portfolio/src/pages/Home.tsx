@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { ArrowRight, ChevronRight, BarChart3, Users, Building2, TrendingUp, ShieldCheck, Layers, GitMerge } from "lucide-react";
+import { ArrowRight, ChevronRight, BarChart3, Users, Building2, TrendingUp, ShieldCheck, Layers, GitMerge, Workflow, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -23,6 +23,39 @@ export default function Home() {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
   };
+
+  const caseStudies = [
+    {
+      id: "risk-platform",
+      title: "Turning a Failed Pilot into a 250+ User Platform",
+      company: "Top 10 North American Bank",
+      role: "Product Owner",
+      hook: "Executives were making risk decisions by squinting at spreadsheets on their phones.",
+      metrics: ["60% Drop in Reports", "250+ Users", "$50K MVP Budget"],
+      icon: <BarChart3 className="w-8 h-8 text-primary" />,
+      image: "case-study-1.png"
+    },
+    {
+      id: "frtb-program",
+      title: "Resolving 10 Critical Decisions on a $20M+ Program",
+      company: "Top 10 North American Bank",
+      role: "Solution Architect",
+      hook: "Six delivery teams working in silos. Critical design decisions stalled for months.",
+      metrics: ["10 Core Decisions Resolved", "6 Teams Aligned", "Capital Requirements Reduced"],
+      icon: <Workflow className="w-8 h-8 text-primary" />,
+      image: "case-study-2.png"
+    },
+    {
+      id: "upgrad-google",
+      title: "Building with Google — Then Knowing When to Stop",
+      company: "$2.25B Edtech Unicorn",
+      role: "Product Manager",
+      hook: "Hired to build an Android Development program from a blank page.",
+      metrics: ["5,000+ Learners", "Google Partnership", "Data-Driven Sunset"],
+      icon: <Smartphone className="w-8 h-8 text-primary" />,
+      image: "case-study-3.png"
+    }
+  ];
 
   return (
     <div className="w-full">
@@ -65,9 +98,9 @@ export default function Home() {
             
             <motion.div variants={item} className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="rounded-xl text-base px-8 h-14 shadow-lg shadow-primary/25 hover:-translate-y-1 transition-all duration-300">
-                <Link href="/case-studies">
+                <a href="#case-studies">
                   View Case Studies <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
+                </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-xl text-base px-8 h-14 bg-card/50 backdrop-blur-sm border-border/50 hover:bg-card hover:border-primary/50 transition-all duration-300">
                 <Link href="/contact">Get in Touch</Link>
@@ -83,7 +116,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-4 divide-y sm:divide-y-0 sm:divide-x divide-border/50">
             {[
               { metric: "60%", label: "Reduction in executive reporting requests", icon: <TrendingUp className="w-5 h-5 text-primary mb-2" /> },
-              { metric: "250+", label: "Active platform users across risk & compliance", icon: <Users className="w-5 h-5 text-primary mb-2" /> },
+              { metric: "250+", label: "Active users shipped on a $50K MVP budget", icon: <Users className="w-5 h-5 text-primary mb-2" /> },
               { metric: "$200K/yr", label: "Annual savings from automated workflows", icon: <BarChart3 className="w-5 h-5 text-primary mb-2" /> },
               { metric: "5,000+", label: "Learners reached via Google partnership", icon: <Building2 className="w-5 h-5 text-primary mb-2" /> },
               { metric: "$2M+", label: "Enterprise contracts influenced", icon: <Layers className="w-5 h-5 text-primary mb-2" /> },
@@ -116,7 +149,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-foreground">Governance-to-Value Translation</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Most PMs understand compliance OR user value. I do both. At BMO, I shipped self-serve dashboards under strict regulatory mandates that cut reporting requests by 60% and grew to 250+ users.
+                  Most PMs understand compliance OR user value. I do both. I shipped self-serve dashboards under strict regulatory mandates that cut reporting requests by 60% and grew to 250+ users.
                 </p>
               </CardContent>
             </Card>
@@ -148,8 +181,68 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Case Studies — directly on home page */}
+      <section id="case-studies" className="py-24 bg-card/20 border-t border-border/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-foreground">Case Studies</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl">
+                How I've solved complex product challenges in regulated environments.
+              </p>
+            </div>
+            <Button asChild variant="outline" className="rounded-xl shrink-0">
+              <Link href="/case-studies">
+                View All <ChevronRight className="w-4 h-4 ml-1" />
+              </Link>
+            </Button>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            {caseStudies.map((c) => (
+              <Link key={c.id} href={`/case-studies/${c.id}`} className="group">
+                <Card className="h-full bg-card/40 border-border/50 hover:bg-card hover:border-primary/50 transition-all duration-300 flex flex-col overflow-hidden">
+                  <div className="h-44 w-full relative overflow-hidden bg-background">
+                    <img
+                      src={`${import.meta.env.BASE_URL}images/${c.image}`}
+                      alt={c.title}
+                      className="w-full h-full object-cover opacity-60 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-card/90 to-transparent" />
+                    <div className="absolute bottom-4 left-6">{c.icon}</div>
+                  </div>
+                  <CardContent className="p-6 flex flex-col flex-1">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="text-xs font-bold tracking-wider uppercase text-primary">{c.company}</span>
+                      <span className="w-1 h-1 rounded-full bg-muted-foreground" />
+                      <span className="text-xs text-muted-foreground">{c.role}</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-foreground mb-4 leading-tight group-hover:text-primary transition-colors">
+                      {c.title}
+                    </h3>
+                    <div className="p-4 rounded-xl bg-background border border-border/50 mb-5 flex-1">
+                      <p className="text-sm font-medium italic text-muted-foreground">"{c.hook}"</p>
+                    </div>
+                    <div className="space-y-3 mt-auto">
+                      <div className="flex flex-wrap gap-2">
+                        {c.metrics.map(m => (
+                          <Badge key={m} variant="secondary" className="bg-secondary/60 text-secondary-foreground text-xs">{m}</Badge>
+                        ))}
+                      </div>
+                      <div className="flex items-center text-sm font-bold text-primary pt-2 border-t border-border/50">
+                        Read Full Case Study <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Career Timeline Teaser */}
-      <section className="py-24 bg-card/20 border-t border-border/50">
+      <section className="py-24 bg-background border-t border-border/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
             <div>
@@ -170,7 +263,7 @@ export default function Home() {
               { company: "Get Set Sorted", role: "Co-Founder", years: "2015 - 2016", tag: "Venture Mode" },
               { company: "Aspiring Minds", role: "Product Consultant", years: "2012 - 2015", tag: "Venture Mode" },
             ].map((job, i) => (
-              <div key={i} className="p-6 rounded-2xl bg-background border border-border/50 hover:border-primary/30 transition-colors">
+              <div key={i} className="p-6 rounded-2xl bg-card/40 border border-border/50 hover:border-primary/30 transition-colors">
                 <Badge variant="secondary" className="mb-4 bg-secondary text-xs">{job.tag}</Badge>
                 <div className="text-sm font-medium text-primary mb-1">{job.years}</div>
                 <h4 className="text-lg font-bold text-foreground mb-1">{job.company}</h4>

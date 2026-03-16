@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, Linkedin, MapPin } from "lucide-react";
+import { Mail, Phone, Linkedin, MapPin, Github } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useDocumentMeta } from "@/hooks/useDocumentMeta";
 
@@ -30,7 +30,7 @@ export default function Contact() {
             </p>
           </motion.div>
 
-          <motion.div variants={item} className="grid sm:grid-cols-2 gap-6 mb-16">
+          <motion.div variants={item} className="grid sm:grid-cols-3 gap-6 mb-8">
             <a href="mailto:dheeraj@hey.com" className="group">
               <Card className="bg-card/50 border-border/50 hover:bg-card hover:border-primary/50 transition-all duration-300 h-full">
                 <CardContent className="p-8 flex flex-col items-center text-center gap-4">
@@ -59,6 +59,22 @@ export default function Contact() {
               </Card>
             </a>
 
+            <a href="https://github.com/dj-chow" target="_blank" rel="noopener noreferrer" className="group">
+              <Card className="bg-card/50 border-border/50 hover:bg-card hover:border-primary/50 transition-all duration-300 h-full">
+                <CardContent className="p-8 flex flex-col items-center text-center gap-4">
+                  <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
+                    <Github className="w-8 h-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-foreground mb-1">GitHub</h3>
+                    <p className="text-muted-foreground group-hover:text-primary transition-colors">github.com/dj-chow</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </a>
+          </motion.div>
+
+          <motion.div variants={item} className="grid sm:grid-cols-2 gap-6 mb-16 max-w-2xl mx-auto">
             <div className="group cursor-default">
               <Card className="bg-card/30 border-border/30 h-full">
                 <CardContent className="p-8 flex flex-col items-center text-center gap-4">
