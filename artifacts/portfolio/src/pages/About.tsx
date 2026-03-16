@@ -135,13 +135,111 @@ export default function About() {
             </div>
           </motion.div>
 
+          {/* Recommendations */}
+          <motion.div variants={item} className="mb-20">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 border-b border-border pb-4">
+              <h2 className="text-2xl font-bold">What Colleagues Say</h2>
+              <a
+                href="https://linkedin.com/in/dheerajchowdhary"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors shrink-0"
+              >
+                <Linkedin className="w-4 h-4" /> All recommendations on LinkedIn
+              </a>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                {
+                  quote: "Dheeraj is a high performing consultant who knows how to solve the most technical and complex of problems while being able to communicate them in succinct and easy-to-understand solutions. He is stakeholder-oriented and knows how to balance customer needs with project budget and timeline constraints.",
+                  name: "Aaron W, CBAP, CSPO",
+                  title: "Lead Product Owner / Associate Director",
+                  company: "RBC",
+                  relationship: "Client",
+                  tag: "Risk Platform",
+                  tagHref: "/case-studies/risk-platform",
+                  initials: "AW"
+                },
+                {
+                  quote: "He genuinely takes the time to understand the business needs and partner with the business to deliver on those needs. Dheeraj has quickly become the go-to SME and has been the team lead for an entire application — responsible for end-to-end deliverables and presentations to senior leadership.",
+                  name: "Ikram Ataullah, PMP, Prosci, CBAP",
+                  title: "Project Manager",
+                  company: "TELUS",
+                  relationship: "Teammate, BMO Operations",
+                  tag: "Risk Platform",
+                  tagHref: "/case-studies/risk-platform",
+                  initials: "IA"
+                },
+                {
+                  quote: "Having run his own startup, he brought a fresh and entrepreneurial mindset to the team. He did market sizing, recruited a stellar team, did user research, worked on marketing campaigns, helped establish corporate partnerships and a lot more. Very professional, hard working and very data-driven.",
+                  name: "Kushal Bhagia",
+                  title: "Tech Investor",
+                  company: "superdm.com",
+                  relationship: "Colleague, UpGrad",
+                  tag: "UpGrad · Google",
+                  tagHref: "/case-studies/upgrad-google",
+                  initials: "KB"
+                },
+                {
+                  quote: "He has been amazing at identifying and attracting great talent, business development and developing new products and business models. One of the qualities I really admire is that he is able to keep his cool even in very tough situations — an invaluable asset for any team.",
+                  name: "Saahil Narang",
+                  title: "Kellogg MBA · Ex-Meta, Bain",
+                  company: "Tech Founder",
+                  relationship: "Co-founder, Get Set Sorted",
+                  tag: "Leadership",
+                  tagHref: null,
+                  initials: "SN"
+                },
+                {
+                  quote: "Dheeraj has a strong analytical bent of mind and brings a very disciplined and structured approach to his work. He is an active listener and adept at talking to clients to understand their requirements, suggesting a suitable solution backed by a data-driven approach.",
+                  name: "Rajat Mathur",
+                  title: "Director",
+                  company: "Aspiring Minds",
+                  relationship: "Direct Manager",
+                  tag: "Stakeholder Management",
+                  tagHref: null,
+                  initials: "RM"
+                },
+              ].map((rec, i) => (
+                <div key={i} className={`p-6 rounded-2xl bg-card/40 border border-border/50 hover:bg-card hover:border-border transition-all duration-300 flex flex-col gap-5 ${i === 4 ? "md:col-span-2 md:max-w-xl" : ""}`}>
+                  <Quote className="w-8 h-8 text-primary/30 shrink-0 -mb-2" />
+                  <p className="text-base text-foreground/80 leading-relaxed italic flex-1">
+                    "{rec.quote}"
+                  </p>
+                  <div className="flex items-center justify-between gap-3 pt-4 border-t border-border/50">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center text-xs font-bold text-primary shrink-0">
+                        {rec.initials}
+                      </div>
+                      <div>
+                        <div className="text-sm font-bold text-foreground leading-tight">{rec.name}</div>
+                        <div className="text-xs text-muted-foreground">{rec.title} · {rec.company}</div>
+                        <div className="text-xs text-muted-foreground/60 mt-0.5">{rec.relationship}</div>
+                      </div>
+                    </div>
+                    {rec.tagHref ? (
+                      <Link href={rec.tagHref}>
+                        <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 text-xs shrink-0 cursor-pointer">
+                          {rec.tag}
+                        </Badge>
+                      </Link>
+                    ) : (
+                      <Badge variant="secondary" className="text-xs shrink-0">{rec.tag}</Badge>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
           {/* LinkedIn CTA */}
           <motion.div variants={item} className="mb-20">
             <Card className="bg-primary/5 border-primary/20">
               <CardContent className="p-6 md:p-8 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div>
                   <p className="text-lg font-semibold text-foreground mb-1">Want the full picture?</p>
-                  <p className="text-sm text-muted-foreground">Connect with me on LinkedIn for recommendations, endorsements, and more detail on my career journey.</p>
+                  <p className="text-sm text-muted-foreground">Connect with me on LinkedIn for endorsements and more detail on my career journey.</p>
                 </div>
                 <Button asChild className="shrink-0">
                   <a href="https://linkedin.com/in/dheerajchowdhary" target="_blank" rel="noopener noreferrer">

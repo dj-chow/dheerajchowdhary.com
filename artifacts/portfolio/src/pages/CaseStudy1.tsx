@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ArrowLeft, CheckCircle2, TrendingUp, Users, Target, Activity } from "lucide-react";
+import { ArrowLeft, CheckCircle2, TrendingUp, Users, Target, Activity, Quote } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useDocumentMeta } from "@/hooks/useDocumentMeta";
 
@@ -75,6 +75,21 @@ export default function CaseStudy1() {
                   <p>
                     <strong>Shipped under constraints:</strong> We shipped the MVP with just a two-person team (myself and a senior dev) on a strict $50K budget. I validated the flow with early adopter champions before scaling it to 250+ users across the enterprise.
                   </p>
+                </div>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-card/60 border border-border/60 relative overflow-hidden">
+                <Quote className="absolute -top-2 -left-2 w-14 h-14 text-primary/15 rotate-180" />
+                <blockquote className="text-base text-foreground/80 leading-relaxed italic mb-5 relative z-10">
+                  "Dheeraj is a high performing consultant who knows how to solve the most technical and complex of problems while being able to communicate them in succinct and easy-to-understand solutions. He is stakeholder-oriented and knows how to balance customer needs with project budget and timeline constraints."
+                </blockquote>
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-full bg-primary/15 flex items-center justify-center text-xs font-bold text-primary shrink-0">AW</div>
+                  <div>
+                    <div className="text-sm font-bold text-foreground leading-tight">Aaron W, CBAP, CSPO</div>
+                    <div className="text-xs text-muted-foreground">Lead Product Owner / Associate Director · RBC</div>
+                    <div className="text-xs text-muted-foreground/60">Client on this project</div>
+                  </div>
                 </div>
               </div>
 

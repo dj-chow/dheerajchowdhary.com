@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ArrowLeft, CheckCircle2, TrendingUp, Target, Activity } from "lucide-react";
+import { ArrowLeft, CheckCircle2, TrendingUp, Target, Activity, Quote } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useDocumentMeta } from "@/hooks/useDocumentMeta";
 
@@ -75,6 +75,21 @@ export default function CaseStudy3() {
                   <p>
                     <strong>Data-Driven Sunset:</strong> The program scaled to 5,000+ learners. However, as the market shifted, completion rates and placement outcomes began falling below our quality thresholds. Instead of pushing for vanity growth, I ran a structured post-mortem, presented the data to leadership, and recommended we sunset the product with a zero-disruption transition plan for enrolled learners.
                   </p>
+                </div>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-card/60 border border-border/60 relative overflow-hidden">
+                <Quote className="absolute -top-2 -left-2 w-14 h-14 text-primary/15 rotate-180" />
+                <blockquote className="text-base text-foreground/80 leading-relaxed italic mb-5 relative z-10">
+                  "Having run his own startup, he brought a fresh and entrepreneurial mindset to the team. He did market sizing, recruited a stellar team, did user research, worked on marketing campaigns, helped establish corporate partnerships and a lot more. Very professional, hard working and very data-driven."
+                </blockquote>
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-full bg-primary/15 flex items-center justify-center text-xs font-bold text-primary shrink-0">KB</div>
+                  <div>
+                    <div className="text-sm font-bold text-foreground leading-tight">Kushal Bhagia</div>
+                    <div className="text-xs text-muted-foreground">Tech Investor</div>
+                    <div className="text-xs text-muted-foreground/60">Colleague at this company</div>
+                  </div>
                 </div>
               </div>
 
