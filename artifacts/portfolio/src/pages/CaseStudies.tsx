@@ -2,13 +2,13 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, BarChart3, Workflow, Smartphone } from "lucide-react";
+import { ArrowRight, BarChart3, Workflow, Smartphone, BrainCircuit } from "lucide-react";
 import { useDocumentMeta } from "@/hooks/useDocumentMeta";
 
 export default function CaseStudies() {
   useDocumentMeta({
     title: "Case Studies — Dheeraj Chowdhary",
-    description: "Deep dives into complex product challenges: risk platform adoption, $20M+ regulatory program alignment, and building an edtech program with Google."
+    description: "Deep dives into complex product challenges: risk platform adoption, $20M+ regulatory program alignment, building an edtech program with Google, and navigating AI resistance."
   });
   const container = {
     hidden: { opacity: 0 },
@@ -50,6 +50,17 @@ export default function CaseStudies() {
       metrics: ["5,000+ Learners", "Google Partnership", "Data-Driven Sunset"],
       icon: <Smartphone className="w-8 h-8 text-primary" />,
       image: "case-study-3.png"
+    },
+    {
+      id: "nlp-assessment",
+      title: "Turning AI Resistance into Enterprise Adoption",
+      company: "AI-Powered Talent Assessment Platform",
+      role: "Product Consultant",
+      hook: "The client's own team was blocking the deal. They thought the AI tool was coming for their jobs.",
+      metrics: ["$2M+ in Contracts", "Southeast Asia Rollout", "NLP / AI Product"],
+      icon: <BrainCircuit className="w-8 h-8 text-primary" />,
+      image: "case-study-1.png",
+      aiTag: true
     }
   ];
 
@@ -57,29 +68,32 @@ export default function CaseStudies() {
     <div className="w-full pt-20 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div initial="hidden" animate="show" variants={container}>
-          
+
           <motion.div variants={item} className="mb-16 max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-foreground">Case Studies</h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Deep dives into how I've solved complex product challenges, driven adoption, and aligned cross-functional teams in highly regulated environments.
+              Deep dives into how I have solved complex product challenges, driven adoption, and aligned cross-functional teams in highly regulated and fast-moving environments.
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {cases.map((c) => (
               <motion.div key={c.id} variants={item} className="h-full flex">
                 <Link href={`/case-studies/${c.id}`} className="w-full flex">
                   <Card className="w-full bg-card/40 border-border/50 hover:bg-card hover:border-primary/50 transition-all duration-300 group flex flex-col overflow-hidden">
                     <div className="h-48 w-full relative overflow-hidden bg-background">
-                      <img 
-                        src={`${import.meta.env.BASE_URL}images/${c.image}`} 
+                      <img
+                        src={`${import.meta.env.BASE_URL}images/${c.image}`}
                         alt={c.title}
                         className="w-full h-full object-cover opacity-60 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-card/90 to-transparent" />
-                      <div className="absolute bottom-4 left-6">
-                        {c.icon}
-                      </div>
+                      <div className="absolute bottom-4 left-6">{c.icon}</div>
+                      {c.aiTag && (
+                        <div className="absolute top-4 right-4">
+                          <Badge className="bg-primary/90 text-primary-foreground text-xs">AI Product</Badge>
+                        </div>
+                      )}
                     </div>
                     <CardContent className="p-6 flex flex-col flex-1">
                       <div className="flex items-center gap-2 mb-3">
@@ -87,11 +101,11 @@ export default function CaseStudies() {
                         <span className="w-1 h-1 rounded-full bg-muted-foreground" />
                         <span className="text-xs text-muted-foreground">{c.role}</span>
                       </div>
-                      
+
                       <h2 className="text-2xl font-bold text-foreground mb-4 leading-tight group-hover:text-primary transition-colors">
                         {c.title}
                       </h2>
-                      
+
                       <div className="p-4 rounded-xl bg-background border border-border/50 mb-6 flex-1">
                         <p className="text-sm font-medium italic text-muted-foreground">"{c.hook}"</p>
                       </div>

@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { ArrowRight, ChevronRight, BarChart3, Users, Building2, TrendingUp, ShieldCheck, Layers, GitMerge, Workflow, Smartphone } from "lucide-react";
+import { ArrowRight, ChevronRight, BarChart3, Users, Building2, TrendingUp, ShieldCheck, Layers, GitMerge, Workflow, Smartphone, Bot, Cpu, BrainCircuit } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -93,7 +93,7 @@ export default function Home() {
             </motion.h1>
             
             <motion.p variants={item} className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-2xl">
-              14+ years building products across startups and enterprise. Currently shipping at Bank of Montreal. Previously built programs with Google, drove $2M+ in enterprise contracts, and co-founded a startup.
+              14+ years building products across startups and enterprise. Currently shipping at Bank of Montreal. Previously launched a program in partnership with Google, drove $2M+ in enterprise contracts, and co-founded a startup.
             </motion.p>
             
             <motion.div variants={item} className="flex flex-col sm:flex-row gap-4">
@@ -177,6 +177,70 @@ export default function Home() {
                 </p>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* PM in the AI Era */}
+      <section className="py-20 bg-card/10 border-t border-border/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-3 text-foreground">PM in the AI Era</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl">
+              I use AI tools daily. I have also shipped one.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <a
+              href="https://github.com/dj-chow/job-fit-analyzer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group p-6 rounded-2xl bg-card/50 border border-border/50 hover:bg-card hover:border-primary/40 transition-all duration-300 flex flex-col gap-4"
+            >
+              <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Bot className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <div className="flex items-center gap-2 mb-2">
+                  <h3 className="text-lg font-bold text-foreground">Shipped a Claude Skill</h3>
+                  <Badge className="bg-primary/10 text-primary border-primary/20 text-xs">GitHub</Badge>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Built a job-fit analyzer using Claude and Claude Code. It scores roles on work activities, not keywords. Published and open source.
+                </p>
+              </div>
+              <div className="flex items-center text-sm font-bold text-primary mt-auto">
+                View on GitHub <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </a>
+
+            <div className="p-6 rounded-2xl bg-card/50 border border-border/50 flex flex-col gap-4">
+              <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center">
+                <Cpu className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-foreground mb-2">AI in Daily Work</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Use Copilot (M365) at work for requirements synthesis, sprint documentation, and stakeholder briefing prep. Less repeatable work. More product thinking.
+                </p>
+              </div>
+            </div>
+
+            <Link href="/case-studies/nlp-assessment" className="group p-6 rounded-2xl bg-card/50 border border-border/50 hover:bg-card hover:border-primary/40 transition-all duration-300 flex flex-col gap-4">
+              <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <BrainCircuit className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-foreground mb-2">AI Adoption Since 2012</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  I navigated enterprise AI resistance before it was a mainstream PM problem. The pattern hasn't changed. It's just affecting more products now.
+                </p>
+              </div>
+              <div className="flex items-center text-sm font-bold text-primary mt-auto">
+                Read the case study <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
           </div>
         </div>
       </section>

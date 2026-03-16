@@ -10,6 +10,7 @@ import CaseStudies from "@/pages/CaseStudies";
 import CaseStudy1 from "@/pages/CaseStudy1";
 import CaseStudy2 from "@/pages/CaseStudy2";
 import CaseStudy3 from "@/pages/CaseStudy3";
+import CaseStudy4 from "@/pages/CaseStudy4";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/not-found";
 
@@ -32,6 +33,7 @@ function Router() {
         <Route path="/case-studies/risk-platform" component={CaseStudy1} />
         <Route path="/case-studies/frtb-program" component={CaseStudy2} />
         <Route path="/case-studies/upgrad-google" component={CaseStudy3} />
+        <Route path="/case-studies/nlp-assessment" component={CaseStudy4} />
         <Route path="/contact" component={Contact} />
         <Route component={NotFound} />
       </Switch>
