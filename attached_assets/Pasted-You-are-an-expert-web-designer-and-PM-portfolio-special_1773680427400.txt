@@ -1,0 +1,44 @@
+You are an expert web designer and PM portfolio specialist. I need you to create a modern, professional Product Manager portfolio website that will help me land interviews at Fintech/ Banking/ Wealthsimple/ Shopify. Read Master Context file to understand me better, this is the book of record in case of conflicts with other files. ABOUT ME:
+
+Current Role: Agile Delivery Lead at Bank of Montreal
+Experience: 15 years, last 9 in IT (did product work under IT titles), previous 6 in business facing roles (see my attached resume brief and resume)
+Target Role: Senior Product Manager at Banking/ Fintech
+Unique Value Prop: take from CMF layers file
+MY CAREER HIGHLIGHTS:
+take from master context or resume brief and resume
+
+MY KEY SKILLS:
+Technical: [List your PM tools, analytics platforms, AI tools, etc.]
+Soft Skills: [Leadership, strategy, user empathy, etc.]
+Domain Expertise: [Industry knowledge, user segments, etc.]
+
+WORK EXAMPLES I CAN SHOWCASE:
+
+[Case Study 1: Brief description with outcome
+PORTFOLIO REQUIREMENTS:
+
+Modern, clean design that looks professional
+Mobile responsive
+Easy navigation
+Showcases both strategic thinking and execution
+Demonstrates [SPECIFIC SKILL YOU WANT TO HIGHLIGHT - e.g., AI expertise]
+Addresses potential concern about [WEAKNESS YOU'RE OVERCOMING]
+DESIGN PREFERENCES:
+
+Color scheme: [Professional blues/grays OR specify preference]
+Style: Minimalist and data-driven
+Include: Professional headshot, contact info, LinkedIn link
+Avoid: Overly flashy animations, hard-to-read fonts
+ATTACHMENTS:
+
+Text file of the case study items I can share
+Recent resume
+Text of my LinkedIn
+Please create a complete portfolio website with:
+Landing page with hero section, highlights, and navigation
+Detailed case study pages for each work example
+About page with my story and background
+Contact page
+Make sure the content is specific, metric-driven, and tells a compelling story about my PM journey and capabilities.
+
+Create a plan before you execute, then go do it.
