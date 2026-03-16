@@ -1,0 +1,22 @@
+packages:
+  "framer-motion": "For page transitions and scroll animations"
+  "@radix-ui/react-slot": "For Button asChild"
+
+images:
+  - path: "artifacts/portfolio/public/images/hero-bg.png"
+    description: "Abstract geometric background, dark deep navy blue with glowing electric blue subtle gradient mesh, fintech professional style, minimal"
+    aspect_ratio: "16:9"
+  - path: "artifacts/portfolio/public/images/case-study-1.png"
+    description: "Abstract data visualization interface, glowing charts and risk thresholds in deep navy and electric blue, dark mode, professional"
+    aspect_ratio: "16:9"
+  - path: "artifacts/portfolio/public/images/case-study-2.png"
+    description: "Abstract network nodes connecting, representing regulatory frameworks and data flows, dark navy background with electric blue nodes"
+    aspect_ratio: "16:9"
+  - path: "artifacts/portfolio/public/images/case-study-3.png"
+    description: "Abstract digital learning nodes and mobile phone wireframe concepts, dark theme with bright blue accents"
+    aspect_ratio: "16:9"
+
+notes:
+  - "Static portfolio website for Dheeraj Chowdhary, targeting Senior PM roles in Fintech."
+  - "No backend API calls needed; all content is hardcoded."
+  - "Forced dark mode theme using electric blue and deep navy."

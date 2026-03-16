@@ -21,7 +21,8 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 ```text
 artifacts-monorepo/
 ├── artifacts/              # Deployable applications
-│   └── api-server/         # Express API server
+│   ├── api-server/         # Express API server
+│   └── portfolio/          # PM Portfolio website (React + Vite, static)
 ├── lib/                    # Shared libraries
 │   ├── api-spec/           # OpenAPI spec + Orval codegen config
 │   ├── api-client-react/   # Generated React Query hooks
@@ -49,6 +50,31 @@ Every package extends `tsconfig.base.json` which sets `composite: true`. The roo
 - `pnpm run typecheck` — runs `tsc --build --emitDeclarationOnly` using project references
 
 ## Packages
+
+### `artifacts/portfolio` (`@workspace/portfolio`)
+
+Dheeraj Chowdhary's PM Portfolio website. Static React + Vite site with dark fintech theme (navy/slate background, electric blue accent). No backend API calls — all content is hardcoded.
+
+- **Pages:** Home, About, Case Studies (index + 3 detail pages), Contact
+- **Theme:** Dark mode with HSL variables in index.css
+- **Routing:** wouter with client-side routing
+- **Animations:** framer-motion for subtle entrance animations
+- **SEO:** Per-page title and meta description via useDocumentMeta hook
+- **Accessibility:** Skip-to-content link, aria-expanded on mobile menu, semantic HTML
+- **Key files:**
+  - `src/App.tsx` — routes and app shell
+  - `src/components/Layout.tsx` — sticky nav, footer, mobile menu
+  - `src/pages/Home.tsx` — hero, metrics, strengths, timeline
+  - `src/pages/About.tsx` — career story, three-act arc, education
+  - `src/pages/CaseStudies.tsx` — index with 3 cards
+  - `src/pages/CaseStudy1.tsx` — Risk Platform (BMO)
+  - `src/pages/CaseStudy2.tsx` — FRTB Program (BMO)
+  - `src/pages/CaseStudy3.tsx` — UpGrad & Google
+  - `src/pages/Contact.tsx` — contact info and availability
+  - `src/hooks/useDocumentMeta.ts` — SEO meta tag management
+- **Deploy target:** dheerajchowdhary.com (static build, user configures CNAME)
+- `pnpm --filter @workspace/portfolio run dev` — dev server
+- `pnpm --filter @workspace/portfolio run build` — production build to `dist/public`
 
 ### `artifacts/api-server` (`@workspace/api-server`)
 
