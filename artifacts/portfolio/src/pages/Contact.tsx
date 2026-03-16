@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, Linkedin, MapPin, Github } from "lucide-react";
+import { Mail, Linkedin, MapPin, Github } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useDocumentMeta } from "@/hooks/useDocumentMeta";
 
 export default function Contact() {
   useDocumentMeta({
     title: "Contact Dheeraj Chowdhary — Get in Touch",
-    description: "Reach out to Dheeraj Chowdhary for Senior PM opportunities in fintech, regtech, and financial services. Based in Mississauga, ON."
+    description: "Reach out to Dheeraj Chowdhary for Senior PM opportunities in fintech, regtech, and financial services. Based in Toronto, ON."
   });
   const container = {
     hidden: { opacity: 0 },
@@ -28,9 +28,13 @@ export default function Contact() {
             <p className="text-lg text-muted-foreground leading-relaxed">
               I'm currently exploring Senior Product Manager opportunities in fintech, regtech, and financial services. Open to hybrid roles in the Greater Toronto Area or remote.
             </p>
+            <div className="flex items-center justify-center gap-2 mt-4 text-sm text-muted-foreground">
+              <MapPin className="w-4 h-4 text-primary" />
+              <span>Toronto, ON</span>
+            </div>
           </motion.div>
 
-          <motion.div variants={item} className="grid sm:grid-cols-3 gap-6 mb-8">
+          <motion.div variants={item} className="grid sm:grid-cols-3 gap-6 mb-16">
             <a href="mailto:dheeraj@hey.com" className="group">
               <Card className="bg-card/50 border-border/50 hover:bg-card hover:border-primary/50 transition-all duration-300 h-full">
                 <CardContent className="p-8 flex flex-col items-center text-center gap-4">
@@ -72,36 +76,6 @@ export default function Contact() {
                 </CardContent>
               </Card>
             </a>
-          </motion.div>
-
-          <motion.div variants={item} className="grid sm:grid-cols-2 gap-6 mb-16 max-w-2xl mx-auto">
-            <div className="group cursor-default">
-              <Card className="bg-card/30 border-border/30 h-full">
-                <CardContent className="p-8 flex flex-col items-center text-center gap-4">
-                  <div className="w-16 h-16 rounded-2xl bg-secondary flex items-center justify-center">
-                    <Phone className="w-8 h-8 text-muted-foreground" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-foreground mb-1">Phone</h3>
-                    <p className="text-muted-foreground">+1 647-787-8917</p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div className="group cursor-default">
-              <Card className="bg-card/30 border-border/30 h-full">
-                <CardContent className="p-8 flex flex-col items-center text-center gap-4">
-                  <div className="w-16 h-16 rounded-2xl bg-secondary flex items-center justify-center">
-                    <MapPin className="w-8 h-8 text-muted-foreground" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-foreground mb-1">Location</h3>
-                    <p className="text-muted-foreground">Mississauga, ON, Canada</p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
           </motion.div>
 
           <motion.div variants={item} className="p-8 md:p-10 rounded-3xl bg-gradient-to-br from-card to-background border border-border/50 text-center max-w-3xl mx-auto relative overflow-hidden">
