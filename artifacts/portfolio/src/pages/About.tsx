@@ -69,7 +69,7 @@ export default function About() {
                 <Badge className="mb-3 bg-primary text-primary-foreground">Act 3: Synthesis Mode (Next)</Badge>
                 <h3 className="text-xl font-bold text-foreground mb-3">Startup speed. Enterprise judgment.</h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  I bring a builder's mindset to large, complex environments. I know how to move fast and still get things right. I am looking for a Senior PM role with clear product accountability. I want to set direction, make calls, and own the outcome. That mandate exists at startups and at large companies. What matters is the scope to lead and the trust to deliver.
+                  I bring a builder's mindset to large, complex environments. I know how to move fast and still get things right. I am looking for a Senior PM role with clear product accountability. I want to set direction, make calls, and own the outcome. What matters is the scope to lead and the trust to deliver.
                 </p>
                 <Button asChild>
                   <Link href="/case-studies">See the evidence <ArrowRight className="w-4 h-4 ml-2" /></Link>
