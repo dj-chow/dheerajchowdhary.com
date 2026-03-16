@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { GraduationCap, Award, Wrench, ArrowRight, Quote } from "lucide-react";
+import { GraduationCap, Award, Wrench, ArrowRight, Quote, ShieldCheck, GitMerge, Layers, Linkedin } from "lucide-react";
 import { useDocumentMeta } from "@/hooks/useDocumentMeta";
 
 export default function About() {
@@ -76,6 +76,80 @@ export default function About() {
                 </Button>
               </div>
             </div>
+          </motion.div>
+
+          {/* Spiky Strengths */}
+          <motion.div variants={item} className="mb-20">
+            <h2 className="text-2xl font-bold border-b border-border pb-4 mb-8">What Sets Me Apart</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <Card className="bg-card/50 border-border/50 hover:border-primary/30 transition-colors">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <ShieldCheck className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground mb-3">Governance-to-Value Translation</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                    Most PMs understand compliance OR user value. I do both. At BMO, I shipped self-serve dashboards under strict regulatory mandates that cut reporting requests by 60% and grew to 250+ users.
+                  </p>
+                  <ul className="space-y-2 text-xs text-muted-foreground">
+                    <li className="flex items-start gap-2"><span className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0"/>Operated under FRTB, audit, and enterprise compliance mandates</li>
+                    <li className="flex items-start gap-2"><span className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0"/>BAU support requests dropped 50%</li>
+                    <li className="flex items-start gap-2"><span className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0"/>Governance meetings shifted from defensive debates to strategic conversations</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-card/50 border-border/50 hover:border-primary/30 transition-colors">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <GitMerge className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground mb-3">Cross-Functional Alignment</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                    360 feedback is unanimous: I connect business and tech. Resolved 10 architectural decisions across risk, tech, and ops on a $20M+ program with 6 delivery teams.
+                  </p>
+                  <ul className="space-y-2 text-xs text-muted-foreground">
+                    <li className="flex items-start gap-2"><span className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0"/>10 Design Authority submissions approved</li>
+                    <li className="flex items-start gap-2"><span className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0"/>Facilitated post-mortems in high-tension environments</li>
+                    <li className="flex items-start gap-2"><span className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0"/>Alignment in multi-party environments with competing incentives</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-card/50 border-border/50 hover:border-primary/30 transition-colors">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <Layers className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground mb-3">Redesigning for Adoption</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                    I take something broken or underbuilt, figure out what's actually needed, and redesign it to work at scale with less friction.
+                  </p>
+                  <ul className="space-y-2 text-xs text-muted-foreground">
+                    <li className="flex items-start gap-2"><span className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0"/>Failed pilot to 250+ active users (risk platform)</li>
+                    <li className="flex items-start gap-2"><span className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0"/>Blank page to 5,000+ learners (UpGrad)</li>
+                    <li className="flex items-start gap-2"><span className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0"/>2,000+ students across 20+ schools (Get Set Sorted)</li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </motion.div>
+
+          {/* LinkedIn CTA */}
+          <motion.div variants={item} className="mb-20">
+            <Card className="bg-primary/5 border-primary/20">
+              <CardContent className="p-6 md:p-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div>
+                  <p className="text-lg font-semibold text-foreground mb-1">Want the full picture?</p>
+                  <p className="text-sm text-muted-foreground">Connect with me on LinkedIn for recommendations, endorsements, and more detail on my career journey.</p>
+                </div>
+                <Button asChild className="shrink-0">
+                  <a href="https://linkedin.com/in/dheerajchowdhary" target="_blank" rel="noopener noreferrer">
+                    <Linkedin className="w-4 h-4 mr-2" /> View LinkedIn Profile
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
           </motion.div>
 
           {/* Education & Tools */}
