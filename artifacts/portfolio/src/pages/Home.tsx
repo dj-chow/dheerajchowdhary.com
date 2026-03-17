@@ -174,9 +174,16 @@ export default function Home() {
       <section className="py-12 border-y border-border bg-card/30 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-4 divide-y sm:divide-y-0 sm:divide-x divide-border/50">
-            {["60%", "250+", "$200K/yr", "5,000+", "$2M+"].map((metric, i) => (
-              <div key={i} className="pt-6 sm:pt-0 sm:px-6 flex items-center first:pl-0 last:pr-0">
-                <div className="text-3xl font-bold text-foreground">{metric}</div>
+            {[
+              { metric: "60%", label: "Reduction in executive reporting requests" },
+              { metric: "250+", label: "Active users shipped on a $50K MVP budget" },
+              { metric: "$200K/yr", label: "Annual savings from automated workflows" },
+              { metric: "5,000+", label: "Learners reached via Google partnership" },
+              { metric: "$2M+", label: "Enterprise contracts influenced" },
+            ].map((stat, i) => (
+              <div key={i} className="pt-6 sm:pt-0 sm:px-6 flex flex-col items-start first:pl-0 last:pr-0">
+                <div className="text-3xl font-bold text-foreground mb-1">{stat.metric}</div>
+                <div className="text-sm text-muted-foreground font-medium leading-snug">{stat.label}</div>
               </div>
             ))}
           </div>
