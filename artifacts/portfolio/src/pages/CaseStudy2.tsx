@@ -104,19 +104,19 @@ export default function CaseStudy2() {
                   
                   <div>
                     <div className="text-3xl font-bold text-primary mb-1">6</div>
-                    <div className="text-sm font-medium text-muted-foreground">Siloed delivery teams successfully aligned</div>
+                    <div className="text-sm font-medium text-muted-foreground">Delivery teams aligned across silos</div>
                   </div>
                   <div className="w-full h-px bg-border/50" />
                   
                   <div>
                     <div className="text-3xl font-bold text-primary mb-1">Capital</div>
-                    <div className="text-sm font-medium text-muted-foreground">Requirements directly reduced via trade decomposition feature</div>
+                    <div className="text-sm font-medium text-muted-foreground">Requirements reduced via trade decomposition</div>
                   </div>
                   <div className="w-full h-px bg-border/50" />
                   
                   <div>
                     <div className="text-3xl font-bold text-primary mb-1">Pass</div>
-                    <div className="text-sm font-medium text-muted-foreground">Satisfactory enterprise compliance rating achieved</div>
+                    <div className="text-sm font-medium text-muted-foreground">Satisfactory enterprise compliance rating</div>
                   </div>
                 </div>
               </div>

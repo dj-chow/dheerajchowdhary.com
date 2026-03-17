@@ -1,9 +1,10 @@
+import { useEffect } from "react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import {
   ArrowRight, BarChart3, ShieldCheck, Layers, GitMerge,
-  Workflow, Smartphone, Bot, Cpu, BrainCircuit, Quote, GraduationCap, Award, Wrench,
-  Mail, Linkedin, Github, MapPin
+  Workflow, Smartphone, Bot, Cpu, BrainCircuit, Quote,
+  Mail, Linkedin, Github, FileDown, ExternalLink
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -15,6 +16,16 @@ export default function Home() {
     title: "Dheeraj Chowdhary — Senior Product Manager Portfolio",
     description: "Senior PM with 14+ years building products that get adopted in complex, regulated environments. Bank of Montreal, fintech, and startups."
   });
+
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+    if (hash) {
+      const el = document.getElementById(hash);
+      if (el) {
+        setTimeout(() => el.scrollIntoView({ behavior: "smooth" }), 100);
+      }
+    }
+  }, []);
 
   const container = {
     hidden: { opacity: 0 },
@@ -70,9 +81,19 @@ export default function Home() {
     }
   ];
 
-  const testimonials = [
+  const voices = [
     {
-      quote: "Dheeraj is a high performing consultant who knows how to solve the most technical and complex of problems while being able to communicate them in succinct and easy-to-understand solutions. He is stakeholder-oriented and knows how to balance customer needs with project budget and timeline constraints.",
+      snippet: "He did market sizing, recruited a stellar team, did user research, worked on marketing campaigns, helped establish corporate partnerships and a lot more. Very professional, hard working and very data-driven.",
+      fullQuote: "Having run his own startup, he brought a fresh and entrepreneurial mindset to the team. He did market sizing, recruited a stellar team, did user research, worked on marketing campaigns, helped establish corporate partnerships and a lot more. Very professional, hard working and very data-driven.",
+      name: "Kushal Bhagia",
+      title: "Tech Investor",
+      company: "superdm.com",
+      relationship: "Colleague, UpGrad",
+      initials: "KB"
+    },
+    {
+      snippet: "He knows how to solve the most technical and complex of problems while being able to communicate them in succinct, easy-to-understand solutions. He is stakeholder-oriented and knows how to balance customer needs with project budget and timeline constraints.",
+      fullQuote: "Dheeraj is a high performing consultant who knows how to solve the most technical and complex of problems while being able to communicate them in succinct and easy-to-understand solutions. He is stakeholder-oriented and knows how to balance customer needs with project budget and timeline constraints.",
       name: "Aaron W, CBAP, CSPO",
       title: "Lead Product Owner / Associate Director",
       company: "RBC",
@@ -80,7 +101,8 @@ export default function Home() {
       initials: "AW"
     },
     {
-      quote: "He genuinely takes the time to understand the business needs and partner with the business to deliver on those needs. Dheeraj has quickly become the go-to SME and has been the team lead for an entire application, responsible for end-to-end deliverables and presentations to senior leadership.",
+      snippet: "He genuinely takes the time to understand the business needs and partner with the business to deliver on those needs.",
+      fullQuote: "He genuinely takes the time to understand the business needs and partner with the business to deliver on those needs. Dheeraj has quickly become the go-to SME and has been the team lead for an entire application, responsible for end-to-end deliverables and presentations to senior leadership.",
       name: "Ikram Ataullah, PMP, Prosci, CBAP",
       title: "Project Manager",
       company: "TELUS",
@@ -88,64 +110,21 @@ export default function Home() {
       initials: "IA"
     },
     {
-      quote: "Having run his own startup, he brought a fresh and entrepreneurial mindset to the team. He did market sizing, recruited a stellar team, did user research, worked on marketing campaigns, helped establish corporate partnerships and a lot more. Very professional, hard working and very data-driven.",
-      name: "Kushal Bhagia",
-      title: "Tech Investor",
-      company: "superdm.com",
-      relationship: "Colleague, UpGrad",
-      initials: "KB"
-    }
-  ];
-
-  const recommendations = [
-    {
-      quote: "Dheeraj is a high performing consultant who knows how to solve the most technical and complex of problems while being able to communicate them in succinct and easy-to-understand solutions. He is stakeholder-oriented and knows how to balance customer needs with project budget and timeline constraints.",
-      name: "Aaron W, CBAP, CSPO",
-      title: "Lead Product Owner / Associate Director",
-      company: "RBC",
-      relationship: "Client",
-      tag: "Risk Platform",
-      tagHref: "/case-studies/risk-platform",
-      initials: "AW"
-    },
-    {
-      quote: "He genuinely takes the time to understand the business needs and partner with the business to deliver on those needs. Dheeraj has quickly become the go-to SME and has been the team lead for an entire application, responsible for end-to-end deliverables and presentations to senior leadership.",
-      name: "Ikram Ataullah, PMP, Prosci, CBAP",
-      title: "Project Manager",
-      company: "TELUS",
-      relationship: "Teammate, BMO Operations",
-      tag: "Risk Platform",
-      tagHref: "/case-studies/risk-platform",
-      initials: "IA"
-    },
-    {
-      quote: "Having run his own startup, he brought a fresh and entrepreneurial mindset to the team. He did market sizing, recruited a stellar team, did user research, worked on marketing campaigns, helped establish corporate partnerships and a lot more. Very professional, hard working and very data-driven.",
-      name: "Kushal Bhagia",
-      title: "Tech Investor",
-      company: "superdm.com",
-      relationship: "Colleague, UpGrad",
-      tag: "UpGrad · Google",
-      tagHref: "/case-studies/upgrad-google",
-      initials: "KB"
-    },
-    {
-      quote: "He has been amazing at identifying and attracting great talent, business development and developing new products and business models. One of the qualities I really admire is that he is able to keep his cool even in very tough situations, an invaluable asset for any team.",
+      snippet: "He has been amazing at identifying and attracting great talent, business development and developing new products and business models.",
+      fullQuote: "He has been amazing at identifying and attracting great talent, business development and developing new products and business models. One of the qualities I really admire is that he is able to keep his cool even in very tough situations, an invaluable asset for any team.",
       name: "Saahil Narang",
       title: "Kellogg MBA, Ex-Meta, Bain",
       company: "Tech Founder",
       relationship: "Co-founder, Get Set Sorted",
-      tag: "Leadership",
-      tagHref: null,
       initials: "SN"
     },
     {
-      quote: "Dheeraj has a strong analytical bent of mind and brings a very disciplined and structured approach to his work. He is an active listener and adept at talking to clients to understand their requirements, suggesting a suitable solution backed by a data-driven approach.",
+      snippet: "Dheeraj has a strong analytical bent of mind and brings a very disciplined and structured approach to his work. He is an active listener and adept at talking to clients to understand their requirements.",
+      fullQuote: "Dheeraj has a strong analytical bent of mind and brings a very disciplined and structured approach to his work. He is an active listener and adept at talking to clients to understand their requirements, suggesting a suitable solution backed by a data-driven approach.",
       name: "Rajat Mathur",
       title: "Director",
       company: "Aspiring Minds",
       relationship: "Direct Manager",
-      tag: "Stakeholder Management",
-      tagHref: null,
       initials: "RM"
     }
   ];
@@ -229,7 +208,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-foreground">Governance-to-Value Translation</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Most PMs understand compliance OR user value. I do both. I shipped self-serve dashboards under strict regulatory mandates that cut reporting requests by 60% and grew to 250+ users.
+                  I understand both compliance and user value, a rare mix in regulated environments. I shipped self-serve dashboards under strict regulatory mandates that cut reporting requests by 60% and grew to 250+ users.
                 </p>
               </CardContent>
             </Card>
@@ -301,7 +280,7 @@ export default function Home() {
               <Badge className="mb-3 bg-primary text-primary-foreground">Act 3: Synthesis Mode (Next)</Badge>
               <h3 className="text-xl font-bold text-foreground mb-3">Startup speed. Enterprise judgment.</h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                I want to own a platform, data, or internal product end-to-end at a company where the problem is hard and the stakes are real. Financial services, fintech, payments, developer platforms. Companies like Wealthsimple, Shopify, or the banks I already know. I bring the ability to work in regulated, cross-functional environments where most PMs stall. I want the scope to set direction, make calls, and own the outcome.
+                I take on hard problems and own the outcome. The domain: financial services, fintech, payments, or developer platforms. Companies like Wealthsimple, Shopify, or the banks I already know. I work best where the stakes are real, the environment is complex, and the team needs someone who can bridge strategy and execution without losing the thread.
               </p>
               <Button asChild>
                 <a href="#case-studies" onClick={(e) => { e.preventDefault(); document.getElementById("case-studies")?.scrollIntoView({ behavior: "smooth" }); }}>
@@ -313,26 +292,44 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Testimonials (3-card horizontal scroll) ──── */}
+      {/* ── Testimonials (5-card horizontal scroll) ──── */}
       <section className="py-20 bg-background border-t border-border/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-10">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-foreground">What Clients and Colleagues Say</h2>
+            <a
+              href="https://linkedin.com/in/dheerajchowdhary/details/recommendations/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors shrink-0"
+            >
+              <Linkedin className="w-4 h-4" /> All recommendations on LinkedIn
+            </a>
           </div>
           <div className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
-            {testimonials.map((t, i) => (
+            {voices.map((v, i) => (
               <div key={i} className="snap-start shrink-0 w-80 md:w-96 p-6 rounded-2xl bg-card/40 border border-border/50 flex flex-col gap-4">
                 <Quote className="w-8 h-8 text-primary/30 shrink-0 -mb-2" />
-                <p className="text-base text-foreground/80 leading-relaxed italic flex-1">"{t.quote}"</p>
-                <div className="flex items-center gap-3 pt-4 border-t border-border/50">
-                  <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center text-xs font-bold text-primary shrink-0">
-                    {t.initials}
+                <p className="text-base text-foreground/80 leading-relaxed italic flex-1">"{v.snippet}"</p>
+                <div className="flex flex-col gap-3 pt-4 border-t border-border/50">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center text-xs font-bold text-primary shrink-0">
+                      {v.initials}
+                    </div>
+                    <div>
+                      <div className="text-sm font-bold text-foreground leading-tight">{v.name}</div>
+                      <div className="text-xs text-muted-foreground">{v.title} · {v.company}</div>
+                      <div className="text-xs text-muted-foreground/60 mt-0.5">{v.relationship}</div>
+                    </div>
                   </div>
-                  <div>
-                    <div className="text-sm font-bold text-foreground leading-tight">{t.name}</div>
-                    <div className="text-xs text-muted-foreground">{t.title} · {t.company}</div>
-                    <div className="text-xs text-muted-foreground/60 mt-0.5">{t.relationship}</div>
-                  </div>
+                  <a
+                    href="https://linkedin.com/in/dheerajchowdhary/details/recommendations/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80 transition-colors"
+                  >
+                    Read full recommendation <ExternalLink className="w-3 h-3 ml-0.5" />
+                  </a>
                 </div>
               </div>
             ))}
@@ -464,68 +461,15 @@ export default function Home() {
 
       {/* ── Contact ──────────────────────────────────── */}
       <section id="contact" className="py-24 bg-background border-t border-border/50 scroll-mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-          {/* What Colleagues Say — full 5-card grid */}
-          <div className="mb-20">
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 border-b border-border pb-4">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">What Colleagues Say</h2>
-              <a
-                href="https://linkedin.com/in/dheerajchowdhary"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors shrink-0"
-              >
-                <Linkedin className="w-4 h-4" /> All recommendations on LinkedIn
-              </a>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              {recommendations.map((rec, i) => (
-                <div key={i} className={`p-6 rounded-2xl bg-card/40 border border-border/50 hover:bg-card hover:border-border transition-all duration-300 flex flex-col gap-5 ${i === 4 ? "md:col-span-2 md:max-w-xl" : ""}`}>
-                  <Quote className="w-8 h-8 text-primary/30 shrink-0 -mb-2" />
-                  <p className="text-base text-foreground/80 leading-relaxed italic flex-1">
-                    "{rec.quote}"
-                  </p>
-                  <div className="flex items-center justify-between gap-3 pt-4 border-t border-border/50">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center text-xs font-bold text-primary shrink-0">
-                        {rec.initials}
-                      </div>
-                      <div>
-                        <div className="text-sm font-bold text-foreground leading-tight">{rec.name}</div>
-                        <div className="text-xs text-muted-foreground">{rec.title} · {rec.company}</div>
-                        <div className="text-xs text-muted-foreground/60 mt-0.5">{rec.relationship}</div>
-                      </div>
-                    </div>
-                    {rec.tagHref ? (
-                      <Link href={rec.tagHref}>
-                        <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 text-xs shrink-0 cursor-pointer">
-                          {rec.tag}
-                        </Badge>
-                      </Link>
-                    ) : (
-                      <Badge variant="secondary" className="text-xs shrink-0">{rec.tag}</Badge>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 text-foreground">Let's Connect</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm exploring Senior Product Manager roles in fintech, regtech, and financial services. Open to hybrid roles in the Greater Toronto Area or remote.
+              If you are building something meaningful in fintech, financial services, or payments — and you need a PM who can work across strategy, regulation, and delivery — I would like to hear from you.
             </p>
-            <div className="flex items-center justify-center gap-2 mt-4 text-sm text-muted-foreground">
-              <MapPin className="w-4 h-4 text-primary" />
-              <span>Toronto, ON</span>
-            </div>
           </div>
 
-          <div className="grid sm:grid-cols-3 gap-6 mb-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <a href="mailto:dheeraj@hey.com" className="group">
               <Card className="bg-card/50 border-border/50 hover:bg-card hover:border-primary/50 transition-all duration-300 h-full">
                 <CardContent className="p-8 flex flex-col items-center text-center gap-4">
@@ -534,7 +478,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-foreground mb-1">Email</h3>
-                    <p className="text-muted-foreground group-hover:text-primary transition-colors">dheeraj@hey.com</p>
+                    <p className="text-sm text-muted-foreground group-hover:text-primary transition-colors">dheeraj@hey.com</p>
                   </div>
                 </CardContent>
               </Card>
@@ -548,7 +492,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-foreground mb-1">LinkedIn</h3>
-                    <p className="text-muted-foreground group-hover:text-primary transition-colors">linkedin.com/in/dheerajchowdhary</p>
+                    <p className="text-sm text-muted-foreground group-hover:text-primary transition-colors">dheerajchowdhary</p>
                   </div>
                 </CardContent>
               </Card>
@@ -562,106 +506,26 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-foreground mb-1">GitHub</h3>
-                    <p className="text-muted-foreground group-hover:text-primary transition-colors">github.com/dj-chow</p>
+                    <p className="text-sm text-muted-foreground group-hover:text-primary transition-colors">dj-chow</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </a>
+
+            <a href={`${import.meta.env.BASE_URL}Dheeraj_Chowdhary_Resume.pdf`} download className="group">
+              <Card className="bg-card/50 border-border/50 hover:bg-card hover:border-primary/50 transition-all duration-300 h-full">
+                <CardContent className="p-8 flex flex-col items-center text-center gap-4">
+                  <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
+                    <FileDown className="w-8 h-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-foreground mb-1">Resume</h3>
+                    <p className="text-sm text-muted-foreground group-hover:text-primary transition-colors">Download PDF</p>
                   </div>
                 </CardContent>
               </Card>
             </a>
           </div>
-
-          <div className="p-8 md:p-10 rounded-3xl bg-gradient-to-br from-card to-background border border-border/50 text-center max-w-3xl mx-auto relative overflow-hidden mb-16">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
-            <h3 className="text-2xl font-bold text-foreground mb-4 relative z-10">What I'm Looking For</h3>
-            <p className="text-lg text-muted-foreground leading-relaxed relative z-10">
-              Senior PM roles at companies building products in financial services, fintech, payments, or developer platforms. I want to own platform, data, or internal products end-to-end. Banks, fintechs like Wealthsimple, or tech companies like Shopify and Stripe. I do my best work in complex, cross-functional environments where the problem is hard and the stakes are real.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 gap-6">
-            <Card className="bg-card/50 border-border/50">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <GraduationCap className="w-6 h-6 text-primary" />
-                  <h3 className="text-lg font-bold">Education</h3>
-                </div>
-                <div className="space-y-4">
-                  <div>
-                    <div className="font-semibold text-foreground">MBA, General Management</div>
-                    <div className="text-sm text-primary mb-1">Faculty of Management Studies, Univ. of Delhi</div>
-                    <div className="text-xs text-muted-foreground">Top 5 business school in India. 1:450 selection ratio.</div>
-                  </div>
-                  <div className="w-full h-px bg-border/50" />
-                  <div>
-                    <div className="font-semibold text-foreground">B.E., Electronics and Communication</div>
-                    <div className="text-sm text-primary mb-1">Netaji Subhas Institute of Technology</div>
-                    <div className="text-xs text-muted-foreground">1:260 selection ratio.</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <div className="space-y-6">
-              <Card className="bg-card/50 border-border/50">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <Award className="w-6 h-6 text-primary" />
-                    <h3 className="text-lg font-bold">Certifications</h3>
-                  </div>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-primary" /> Certified Scrum Product Owner (CSPO)</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-primary" /> Prosci Certified Change Practitioner</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-primary" /> CFA Level 1</li>
-                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-primary" /> AI for All</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-card/50 border-border/50">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <Wrench className="w-6 h-6 text-primary" />
-                    <h3 className="text-lg font-bold">Tools</h3>
-                  </div>
-                  <div className="space-y-3">
-                    <div>
-                      <div className="text-xs font-medium text-muted-foreground mb-1.5 uppercase tracking-wider">Product & Analytics</div>
-                      <div className="flex flex-wrap gap-1.5">
-                        {["Clarity", "SQL", "Kibana"].map((tool) => (
-                          <Badge key={tool} variant="secondary" className="bg-secondary/50">{tool}</Badge>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-xs font-medium text-muted-foreground mb-1.5 uppercase tracking-wider">Collaboration</div>
-                      <div className="flex flex-wrap gap-1.5">
-                        {["Jira", "Confluence"].map((tool) => (
-                          <Badge key={tool} variant="secondary" className="bg-secondary/50">{tool}</Badge>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-xs font-medium text-muted-foreground mb-1.5 uppercase tracking-wider">AI</div>
-                      <div className="flex flex-wrap gap-1.5">
-                        {["Claude", "Copilot (M365)"].map((tool) => (
-                          <Badge key={tool} variant="secondary" className="bg-secondary/50">{tool}</Badge>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-xs font-medium text-muted-foreground mb-1.5 uppercase tracking-wider">Cloud</div>
-                      <div className="flex flex-wrap gap-1.5">
-                        {["AWS", "GCP"].map((tool) => (
-                          <Badge key={tool} variant="secondary" className="bg-secondary/50">{tool}</Badge>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
         </div>
       </section>
 

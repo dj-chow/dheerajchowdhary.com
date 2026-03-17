@@ -8,8 +8,8 @@ interface LayoutProps {
 }
 
 const navLinks = [
-  { href: "/#case-studies", label: "Work" },
   { href: "/#story", label: "Story" },
+  { href: "/#case-studies", label: "Work" },
   { href: "/#contact", label: "Say Hello" },
 ];
 
