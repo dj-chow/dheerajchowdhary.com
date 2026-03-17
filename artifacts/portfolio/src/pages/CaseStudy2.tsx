@@ -6,7 +6,7 @@ import { useDocumentMeta } from "@/hooks/useDocumentMeta";
 export default function CaseStudy2() {
   useDocumentMeta({
     title: "Regulatory Program Case Study — Dheeraj Chowdhary",
-    description: "How I resolved 10 critical design decisions across 6 delivery teams on a $20M+ regulatory program at a top North American bank."
+    description: "How I resolved 10 critical design decisions across 6 delivery teams on a $20M+ regulatory program at Bank of Montreal."
   });
   const fadeUp = {
     hidden: { opacity: 0, y: 20 },

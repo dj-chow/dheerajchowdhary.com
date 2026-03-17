@@ -24,7 +24,7 @@ export default function CaseStudies() {
     {
       id: "risk-platform",
       title: "Turning a Failed Pilot into a 250+ User Platform",
-      company: "Top 10 North American Bank",
+      company: "Bank of Montreal, Risk Reporting",
       role: "Product Owner",
       hook: "Executives were making risk decisions by squinting at spreadsheets on their phones.",
       metrics: ["60% Drop in Reports", "250+ Users", "$50K MVP Budget"],
@@ -34,7 +34,7 @@ export default function CaseStudies() {
     {
       id: "frtb-program",
       title: "Resolving 10 Critical Decisions on a $20M+ Program",
-      company: "Top 10 North American Bank",
+      company: "Bank of Montreal, Regulatory Trading Programs",
       role: "Solution Architect",
       hook: "Six delivery teams working in silos. Critical design decisions stalled.",
       metrics: ["10 Core Decisions Resolved", "6 Teams Aligned", "Capital Requirements Reduced"],

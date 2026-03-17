@@ -60,7 +60,7 @@ export default function About() {
                 <Badge className="mb-3">Act 2: Scale Mode (2017-Present)</Badge>
                 <h3 className="text-xl font-bold text-foreground mb-3">Mastering complexity and delivery at enterprise scale.</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  At a top North American bank, I built a risk reporting platform from the ground up. As Product Owner, I took a failed pilot and redesigned it as a self-serve tool. It grew to 250 users. Reporting requests from senior leaders dropped by 60 percent. I also joined a $20M program in year three. Six delivery teams were working in silos. I resolved 10 critical design decisions and got everyone aligned.
+                  At Bank of Montreal, I built a risk reporting platform from the ground up. As Product Owner, I took a failed pilot and redesigned it as a self-serve tool. It grew to 250 users. Reporting requests from senior leaders dropped by 60 percent. I also joined a $20M program in year three. Six delivery teams were working in silos. I resolved 10 critical design decisions and got everyone aligned.
                 </p>
               </div>
 
