@@ -23,7 +23,7 @@ export default function Home() {
 
   const item = {
     hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } }
   };
 
   const caseStudies = [
@@ -72,7 +72,7 @@ export default function Home() {
 
   const testimonials = [
     {
-      quote: "Dheeraj is a high performing consultant who knows how to solve the most technical and complex of problems while being able to communicate them in succinct and easy-to-understand solutions.",
+      quote: "Dheeraj is a high performing consultant who knows how to solve the most technical and complex of problems while being able to communicate them in succinct and easy-to-understand solutions. He is stakeholder-oriented and knows how to balance customer needs with project budget and timeline constraints.",
       name: "Aaron W, CBAP, CSPO",
       title: "Lead Product Owner / Associate Director",
       company: "RBC",
@@ -80,15 +80,15 @@ export default function Home() {
       initials: "AW"
     },
     {
-      quote: "He genuinely takes the time to understand the business needs and partner with the business to deliver on those needs. Dheeraj has quickly become the go-to SME and has been the team lead for an entire application.",
+      quote: "He genuinely takes the time to understand the business needs and partner with the business to deliver on those needs. Dheeraj has quickly become the go-to SME and has been the team lead for an entire application, responsible for end-to-end deliverables and presentations to senior leadership.",
       name: "Ikram Ataullah, PMP, Prosci, CBAP",
       title: "Project Manager",
-      company: "TELUS / BMO",
-      relationship: "Teammate",
+      company: "TELUS",
+      relationship: "Teammate, BMO Operations",
       initials: "IA"
     },
     {
-      quote: "Having run his own startup, he brought a fresh and entrepreneurial mindset to the team. Very professional, hard working and very data-driven.",
+      quote: "Having run his own startup, he brought a fresh and entrepreneurial mindset to the team. He did market sizing, recruited a stellar team, did user research, worked on marketing campaigns, helped establish corporate partnerships and a lot more. Very professional, hard working and very data-driven.",
       name: "Kushal Bhagia",
       title: "Tech Investor",
       company: "superdm.com",
@@ -273,7 +273,7 @@ export default function Home() {
               </p>
             </div>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I bridge business and technology. I turn complex processes into products that work. My career spans 14 years. I have built at startups in India and at a top Canadian bank.
+              I bridge business and technology. My career spans 14 years across startups in India and one of Canada's largest banks. The pattern is the same everywhere: find the real problem, align the people, ship something that sticks.
             </p>
           </div>
 

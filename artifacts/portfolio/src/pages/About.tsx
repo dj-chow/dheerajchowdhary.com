@@ -32,12 +32,12 @@ export default function About() {
             <div className="p-6 md:p-8 rounded-2xl bg-primary/5 border border-primary/20 mb-8 relative overflow-hidden">
               <Quote className="absolute -top-4 -left-4 w-24 h-24 text-primary/10 rotate-180" />
               <p className="text-xl md:text-2xl font-medium text-foreground leading-relaxed relative z-10">
-                "I build products people actually use. I have done it at startups. I have done it at one of Canada's top banks. The method is always the same: talk to the right people, find the real problem, and ship a fix that sticks."
+                "I take ambiguous operational problems, align the people who own pieces of the workflow, and deliver solutions that get used, not just released."
               </p>
             </div>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I bridge business and technology. I turn complex processes into products that work. My career spans 14 years. I have built at startups in India and at a top Canadian bank.
+              I bridge business and technology. My career spans 14 years across startups in India and one of Canada's largest banks. The pattern is the same everywhere: find the real problem, align the people, ship something that sticks.
             </p>
           </motion.div>
 
