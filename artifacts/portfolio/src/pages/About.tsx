@@ -69,7 +69,7 @@ export default function About() {
                 <Badge className="mb-3 bg-primary text-primary-foreground">Act 3: Synthesis Mode (Next)</Badge>
                 <h3 className="text-xl font-bold text-foreground mb-3">Startup speed. Enterprise judgment.</h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  I bring a builder's mindset to large, complex environments. I know how to move fast and still get things right. I am looking for a Senior PM role with clear product accountability. I want to set direction, make calls, and own the outcome. What matters is the scope to lead and the trust to deliver.
+                  I want to own a platform, data, or internal product end-to-end at a company where the problem is hard and the stakes are real. Financial services, fintech, payments, developer platforms. Companies like Wealthsimple, Shopify, Stripe, or the banks I already know. I bring the ability to work in regulated, cross-functional environments where most PMs stall. I want the scope to set direction, make calls, and own the outcome.
                 </p>
                 <Button asChild>
                   <Link href="/case-studies">See the evidence <ArrowRight className="w-4 h-4 ml-2" /></Link>
@@ -80,22 +80,17 @@ export default function About() {
 
           {/* Spiky Strengths */}
           <motion.div variants={item} className="mb-20">
-            <h2 className="text-2xl font-bold border-b border-border pb-4 mb-8">What Sets Me Apart</h2>
+            <h2 className="text-2xl font-bold border-b border-border pb-4 mb-8">How I Think</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <Card className="bg-card/50 border-border/50 hover:border-primary/30 transition-colors">
                 <CardContent className="p-6">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                     <ShieldCheck className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="text-lg font-bold text-foreground mb-3">Compliance Meets User Value</h3>
+                  <h3 className="text-lg font-bold text-foreground mb-3">I Start with the Constraint</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                    Most PMs handle rules or user needs. I work with both. I shipped a self-serve risk tool under strict rules. It cut reporting requests by 60 percent and grew to 250 users.
+                    Regulated environments aren't blockers. They're design inputs. I treat compliance requirements the same way I treat user needs: map them early, build around them, and ship something people actually want to use. That's how a failed pilot became a 250-user platform under strict audit mandates.
                   </p>
-                  <ul className="space-y-2 text-xs text-muted-foreground">
-                    <li className="flex items-start gap-2"><span className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0"/>Delivered under FRTB, audit, and bank compliance mandates</li>
-                    <li className="flex items-start gap-2"><span className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0"/>BAU support requests dropped 50%</li>
-                    <li className="flex items-start gap-2"><span className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0"/>Risk meetings shifted from defense to strategy</li>
-                  </ul>
                 </CardContent>
               </Card>
 
@@ -104,15 +99,10 @@ export default function About() {
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                     <GitMerge className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="text-lg font-bold text-foreground mb-3">Cross-Team Alignment</h3>
+                  <h3 className="text-lg font-bold text-foreground mb-3">I Find the Real Blocker</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                    My 360 feedback is consistent: I connect business and tech. I resolved 10 design decisions on a $20M program. Six teams were involved. All were aligned by the end.
+                    On the $20M+ FRTB program, the surface problem was "teams aren't aligned." The real problem was that no one owned the architectural trade-offs. I created Design Authority sessions that forced decisions in the room, not over email. 10 critical decisions resolved, six teams unblocked.
                   </p>
-                  <ul className="space-y-2 text-xs text-muted-foreground">
-                    <li className="flex items-start gap-2"><span className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0"/>10 Design Authority decisions approved</li>
-                    <li className="flex items-start gap-2"><span className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0"/>Led post-mortems in high-pressure settings</li>
-                    <li className="flex items-start gap-2"><span className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0"/>Aligned teams with competing goals and timelines</li>
-                  </ul>
                 </CardContent>
               </Card>
 
@@ -121,15 +111,10 @@ export default function About() {
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                     <Layers className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="text-lg font-bold text-foreground mb-3">Built for Adoption</h3>
+                  <h3 className="text-lg font-bold text-foreground mb-3">I Know When to Kill It</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                    I take broken or half-built products and fix them. I start with the real user need. Then I redesign for scale. Failed pilot to 250 users. Blank page to 5,000 learners.
+                    At UpGrad, I built a program from zero to 5,000 learners with Google. When completion and placement rates dropped below threshold, I recommended sunsetting it. Presented the data, built a transition plan, and shut it down with zero disruption. Knowing when to stop is a product skill most PMs avoid.
                   </p>
-                  <ul className="space-y-2 text-xs text-muted-foreground">
-                    <li className="flex items-start gap-2"><span className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0"/>Failed pilot to 250 active users</li>
-                    <li className="flex items-start gap-2"><span className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0"/>Blank page to 5,000 learners</li>
-                    <li className="flex items-start gap-2"><span className="w-1 h-1 rounded-full bg-primary mt-1.5 shrink-0"/>2,000 students across 20 schools</li>
-                  </ul>
                 </CardContent>
               </Card>
             </div>
@@ -296,10 +281,39 @@ export default function About() {
                     <Wrench className="w-6 h-6 text-primary" />
                     <h3 className="text-lg font-bold">Tools</h3>
                   </div>
-                  <div className="flex flex-wrap gap-2">
-                    {["Jira", "Confluence", "SQL", "Kibana", "Power Apps", "AWS (Foundational)", "Clarity"].map((tool) => (
-                      <Badge key={tool} variant="secondary" className="bg-secondary/50">{tool}</Badge>
-                    ))}
+                  <div className="space-y-3">
+                    <div>
+                      <div className="text-xs font-medium text-muted-foreground mb-1.5 uppercase tracking-wider">Product & Analytics</div>
+                      <div className="flex flex-wrap gap-1.5">
+                        {["Clarity", "SQL", "Kibana"].map((tool) => (
+                          <Badge key={tool} variant="secondary" className="bg-secondary/50">{tool}</Badge>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-xs font-medium text-muted-foreground mb-1.5 uppercase tracking-wider">Collaboration</div>
+                      <div className="flex flex-wrap gap-1.5">
+                        {["Jira", "Confluence"].map((tool) => (
+                          <Badge key={tool} variant="secondary" className="bg-secondary/50">{tool}</Badge>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-xs font-medium text-muted-foreground mb-1.5 uppercase tracking-wider">AI</div>
+                      <div className="flex flex-wrap gap-1.5">
+                        {["Claude", "Copilot (M365)"].map((tool) => (
+                          <Badge key={tool} variant="secondary" className="bg-secondary/50">{tool}</Badge>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-xs font-medium text-muted-foreground mb-1.5 uppercase tracking-wider">Cloud</div>
+                      <div className="flex flex-wrap gap-1.5">
+                        {["AWS", "GCP"].map((tool) => (
+                          <Badge key={tool} variant="secondary" className="bg-secondary/50">{tool}</Badge>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </CardContent>
               </Card>

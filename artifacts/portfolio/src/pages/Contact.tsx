@@ -83,7 +83,7 @@ export default function Contact() {
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
             <h2 className="text-2xl font-bold text-foreground mb-4 relative z-10">What I'm Looking For</h2>
             <p className="text-lg text-muted-foreground leading-relaxed relative z-10">
-              Senior PM roles at mid-to-large companies where I can own platform, data, or internal products end-to-end — from discovery through delivery to adoption. I thrive in regulated environments where cross-functional alignment and stakeholder management are critical superpowers.
+              Senior PM roles at companies building products in financial services, fintech, payments, or developer platforms. I want to own platform, data, or internal products end-to-end. Banks, fintechs like Wealthsimple, or tech companies like Shopify and Stripe. I do my best work in complex, cross-functional environments where the problem is hard and the stakes are real.
             </p>
           </motion.div>
 

@@ -9,7 +9,7 @@ import { useDocumentMeta } from "@/hooks/useDocumentMeta";
 export default function Home() {
   useDocumentMeta({
     title: "Dheeraj Chowdhary — Product Manager | PM Portfolio",
-    description: "Product Manager with 14+ years building products across startups and enterprise banking. Specializing in turning compliance complexity into products people adopt."
+    description: "Product Manager with 14+ years building internal products that replace manual workflows at scale. Experience across enterprise banking, fintech, and startups."
   });
   const container = {
     hidden: { opacity: 0 },
@@ -82,14 +82,10 @@ export default function Home() {
               <Badge variant="outline" className="px-3 py-1 text-sm bg-primary/10 text-primary border-primary/20">
                 Product Manager
               </Badge>
-              <span className="text-sm font-medium text-muted-foreground flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                Available for Senior Roles
-              </span>
             </motion.div>
             
             <motion.h1 variants={item} className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6 text-foreground">
-              I turn compliance complexity into <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">products people actually adopt.</span>
+              I build internal products that <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">replace manual workflows at scale.</span>
             </motion.h1>
             
             <motion.p variants={item} className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-2xl">
@@ -100,6 +96,11 @@ export default function Home() {
               <Button asChild size="lg" className="rounded-xl text-base px-8 h-14 shadow-lg shadow-primary/25 hover:-translate-y-1 transition-all duration-300">
                 <a href="#case-studies">
                   View Case Studies <ArrowRight className="w-5 h-5 ml-2" />
+                </a>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="rounded-xl text-base px-8 h-14 bg-card/50 backdrop-blur-sm border-border/50 hover:bg-card hover:border-primary/50 transition-all duration-300">
+                <a href={`${import.meta.env.BASE_URL}Dheeraj_Chowdhary_Resume.pdf`} download>
+                  Download Resume <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-xl text-base px-8 h-14 bg-card/50 backdrop-blur-sm border-border/50 hover:bg-card hover:border-primary/50 transition-all duration-300">
