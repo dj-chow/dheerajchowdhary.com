@@ -462,58 +462,58 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── What Colleagues Say (full 5-card grid) ────── */}
-      <section className="py-24 bg-card/10 border-t border-border/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 border-b border-border pb-4">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">What Colleagues Say</h2>
-            <a
-              href="https://linkedin.com/in/dheerajchowdhary"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors shrink-0"
-            >
-              <Linkedin className="w-4 h-4" /> All recommendations on LinkedIn
-            </a>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {recommendations.map((rec, i) => (
-              <div key={i} className={`p-6 rounded-2xl bg-card/40 border border-border/50 hover:bg-card hover:border-border transition-all duration-300 flex flex-col gap-5 ${i === 4 ? "md:col-span-2 md:max-w-xl" : ""}`}>
-                <Quote className="w-8 h-8 text-primary/30 shrink-0 -mb-2" />
-                <p className="text-base text-foreground/80 leading-relaxed italic flex-1">
-                  "{rec.quote}"
-                </p>
-                <div className="flex items-center justify-between gap-3 pt-4 border-t border-border/50">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center text-xs font-bold text-primary shrink-0">
-                      {rec.initials}
-                    </div>
-                    <div>
-                      <div className="text-sm font-bold text-foreground leading-tight">{rec.name}</div>
-                      <div className="text-xs text-muted-foreground">{rec.title} · {rec.company}</div>
-                      <div className="text-xs text-muted-foreground/60 mt-0.5">{rec.relationship}</div>
-                    </div>
-                  </div>
-                  {rec.tagHref ? (
-                    <Link href={rec.tagHref}>
-                      <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 text-xs shrink-0 cursor-pointer">
-                        {rec.tag}
-                      </Badge>
-                    </Link>
-                  ) : (
-                    <Badge variant="secondary" className="text-xs shrink-0">{rec.tag}</Badge>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── Contact ──────────────────────────────────── */}
       <section id="contact" className="py-24 bg-background border-t border-border/50 scroll-mt-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* What Colleagues Say — full 5-card grid */}
+          <div className="mb-20">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 border-b border-border pb-4">
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">What Colleagues Say</h2>
+              <a
+                href="https://linkedin.com/in/dheerajchowdhary"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors shrink-0"
+              >
+                <Linkedin className="w-4 h-4" /> All recommendations on LinkedIn
+              </a>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {recommendations.map((rec, i) => (
+                <div key={i} className={`p-6 rounded-2xl bg-card/40 border border-border/50 hover:bg-card hover:border-border transition-all duration-300 flex flex-col gap-5 ${i === 4 ? "md:col-span-2 md:max-w-xl" : ""}`}>
+                  <Quote className="w-8 h-8 text-primary/30 shrink-0 -mb-2" />
+                  <p className="text-base text-foreground/80 leading-relaxed italic flex-1">
+                    "{rec.quote}"
+                  </p>
+                  <div className="flex items-center justify-between gap-3 pt-4 border-t border-border/50">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center text-xs font-bold text-primary shrink-0">
+                        {rec.initials}
+                      </div>
+                      <div>
+                        <div className="text-sm font-bold text-foreground leading-tight">{rec.name}</div>
+                        <div className="text-xs text-muted-foreground">{rec.title} · {rec.company}</div>
+                        <div className="text-xs text-muted-foreground/60 mt-0.5">{rec.relationship}</div>
+                      </div>
+                    </div>
+                    {rec.tagHref ? (
+                      <Link href={rec.tagHref}>
+                        <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 text-xs shrink-0 cursor-pointer">
+                          {rec.tag}
+                        </Badge>
+                      </Link>
+                    ) : (
+                      <Badge variant="secondary" className="text-xs shrink-0">{rec.tag}</Badge>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        <div className="max-w-4xl mx-auto">
           <div className="mb-12 text-center max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 text-foreground">Let's Connect</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -661,6 +661,7 @@ export default function Home() {
               </Card>
             </div>
           </div>
+        </div>
         </div>
       </section>
 
