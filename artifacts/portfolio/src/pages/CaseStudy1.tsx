@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Link } from "wouter";
 import { ArrowLeft, CheckCircle2, TrendingUp, Users, Target, Activity, Quote } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useDocumentMeta } from "@/hooks/useDocumentMeta";
@@ -17,15 +16,15 @@ export default function CaseStudy1() {
   return (
     <div className="w-full pt-12 pb-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Link href="/case-studies" className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-primary mb-8 transition-colors">
+        <a href="/#case-studies" className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-primary mb-8 transition-colors">
           <ArrowLeft className="w-4 h-4 mr-1" /> Back to Case Studies
-        </Link>
+        </a>
 
         <motion.div initial="hidden" animate="show" variants={fadeUp} className="space-y-12">
           
           <header className="space-y-6">
             <div className="flex flex-wrap items-center gap-3">
-              <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 text-sm py-1 px-3">Top 10 North American Bank</Badge>
+              <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 text-sm py-1 px-3">Bank of Montreal, Risk Reporting</Badge>
               <span className="text-muted-foreground font-medium">Product Owner</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground leading-[1.1]">

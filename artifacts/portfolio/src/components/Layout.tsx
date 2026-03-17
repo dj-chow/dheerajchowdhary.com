@@ -1,10 +1,23 @@
 import { ReactNode, useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Linkedin, Mail, ExternalLink, Github } from "lucide-react";
+import { Menu, X, Linkedin, Mail, ExternalLink, Github, FileDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface LayoutProps {
   children: ReactNode;
+}
+
+const navLinks = [
+  { href: "/#case-studies", label: "Work" },
+  { href: "/#story", label: "Story" },
+  { href: "/#contact", label: "Say Hello" },
+];
+
+function smoothScrollTo(id: string) {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  }
 }
 
 export default function Layout({ children }: LayoutProps) {
@@ -14,7 +27,9 @@ export default function Layout({ children }: LayoutProps) {
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
-    window.scrollTo(0, 0);
+    if (location !== "/") {
+      window.scrollTo(0, 0);
+    }
   }, [location]);
 
   useEffect(() => {
@@ -25,12 +40,12 @@ export default function Layout({ children }: LayoutProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/case-studies", label: "Case Studies" },
-    { href: "/contact", label: "Contact" },
-  ];
+  function handleAnchorClick(e: React.MouseEvent<HTMLAnchorElement>, hash: string) {
+    if (location === "/") {
+      e.preventDefault();
+      smoothScrollTo(hash);
+    }
+  }
 
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground overflow-x-hidden">
@@ -60,19 +75,19 @@ export default function Layout({ children }: LayoutProps) {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-1" aria-label="Main navigation">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                  location === link.href
-                    ? "bg-secondary text-primary"
-                    : "text-muted-foreground hover:text-foreground hover:bg-secondary/50"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const hash = link.href.replace("/#", "");
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={(e) => handleAnchorClick(e, hash)}
+                  className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 text-muted-foreground hover:text-foreground hover:bg-secondary/50"
+                >
+                  {link.label}
+                </a>
+              );
+            })}
             <div className="ml-4 pl-4 border-l border-border flex items-center gap-3">
               <a
                 href="https://linkedin.com/in/dheerajchowdhary"
@@ -92,8 +107,21 @@ export default function Layout({ children }: LayoutProps) {
               >
                 <Github className="w-5 h-5" />
               </a>
+              <a
+                href={`${import.meta.env.BASE_URL}Dheeraj_Chowdhary_Resume.pdf`}
+                download
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Download Resume"
+              >
+                <FileDown className="w-5 h-5" />
+              </a>
               <Button asChild size="sm" className="rounded-full px-5 shadow-lg shadow-primary/20 hover:-translate-y-0.5 transition-all">
-                <Link href="/contact">Get in Touch</Link>
+                <a
+                  href="/#contact"
+                  onClick={(e) => handleAnchorClick(e, "contact")}
+                >
+                  Get in Touch
+                </a>
               </Button>
             </div>
           </nav>
@@ -115,17 +143,30 @@ export default function Layout({ children }: LayoutProps) {
       {isMobileMenuOpen && (
         <div id="mobile-nav" role="dialog" aria-label="Navigation menu" className="fixed inset-0 z-40 bg-background/95 backdrop-blur-xl md:hidden pt-24 px-6 flex flex-col gap-6 animate-in fade-in slide-in-from-top-10 duration-300">
           <nav className="flex flex-col gap-2" aria-label="Mobile navigation">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`text-2xl font-semibold py-4 border-b border-border/50 ${
-                  location === link.href ? "text-primary" : "text-foreground"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const hash = link.href.replace("/#", "");
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={(e) => {
+                    setIsMobileMenuOpen(false);
+                    handleAnchorClick(e, hash);
+                  }}
+                  className="text-2xl font-semibold py-4 border-b border-border/50 text-foreground"
+                >
+                  {link.label}
+                </a>
+              );
+            })}
+            <a
+              href={`${import.meta.env.BASE_URL}Dheeraj_Chowdhary_Resume.pdf`}
+              download
+              className="text-2xl font-semibold py-4 border-b border-border/50 text-foreground flex items-center gap-3"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <FileDown className="w-6 h-6" /> Download Resume
+            </a>
           </nav>
           <div className="flex flex-col gap-4 mt-8">
             <a

@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Link } from "wouter";
 import { ArrowLeft, CheckCircle2, TrendingUp, Target, Activity, Quote } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useDocumentMeta } from "@/hooks/useDocumentMeta";
@@ -17,9 +16,9 @@ export default function CaseStudy3() {
   return (
     <div className="w-full pt-12 pb-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Link href="/case-studies" className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-primary mb-8 transition-colors">
+        <a href="/#case-studies" className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-primary mb-8 transition-colors">
           <ArrowLeft className="w-4 h-4 mr-1" /> Back to Case Studies
-        </Link>
+        </a>
 
         <motion.div initial="hidden" animate="show" variants={fadeUp} className="space-y-12">
           
