@@ -465,7 +465,7 @@ export default function Home() {
           <div className="mb-12 text-center max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 text-foreground">Let's Connect</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              If you are building something meaningful in fintech, financial services, or payments — and you need a PM who can work across strategy, regulation, and delivery — I would like to hear from you.
+              Building in fintech, financial services, or payments and need a PM who can work across strategy, regulation, and delivery? Let's talk.
             </p>
           </div>
 
