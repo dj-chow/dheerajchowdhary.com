@@ -176,7 +176,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-4 divide-y sm:divide-y-0 sm:divide-x divide-border/50">
             {[
               { metric: "60%", label: "Reduction in executive reporting requests" },
-              { metric: "250+", label: "Active users shipped on a $50K MVP budget" },
+              { metric: "250+", label: "Active users on a $50K MVP budget" },
               { metric: "$200K/yr", label: "Annual savings from automated workflows" },
               { metric: "5,000+", label: "Learners reached via Google partnership" },
               { metric: "$2M+", label: "Enterprise contracts influenced" },
@@ -220,7 +220,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-foreground">Cross-Functional Alignment</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Led cross-functional alignment across risk, technology, and operations teams on a $20M+ program, resolving 10 key design decisions across 6 delivery teams without direct authority.
+                  I led cross-functional alignment across risk, technology, and operations teams on a $20M+ program, resolving 10 key design decisions across 6 delivery teams without direct authority.
                 </p>
               </CardContent>
             </Card>
@@ -248,7 +248,7 @@ export default function Home() {
             <div className="p-6 md:p-8 rounded-2xl bg-primary/5 border border-primary/20 mb-8 relative overflow-hidden">
               <Quote className="absolute -top-4 -left-4 w-24 h-24 text-primary/10 rotate-180" />
               <p className="text-xl md:text-2xl font-medium text-foreground leading-relaxed relative z-10">
-                "I take ambiguous operational problems, align the people who own pieces of the workflow, and deliver solutions that get used, not just released."
+                "I take ambiguous operational problems, align the people who own pieces of the workflow, and deliver solutions that get used."
               </p>
             </div>
             <p className="text-lg text-muted-foreground leading-relaxed">
