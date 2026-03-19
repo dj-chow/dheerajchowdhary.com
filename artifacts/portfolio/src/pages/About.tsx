@@ -28,7 +28,15 @@ export default function About() {
           
           <motion.div variants={item} className="mb-16">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-foreground">My Story</h1>
-            
+
+            <div className="mb-8 flex justify-center">
+              <img
+                src={`${import.meta.env.BASE_URL}images/headshot.jpeg`}
+                alt="Dheeraj Chowdhary"
+                className="w-32 h-32 rounded-2xl object-cover shadow-lg border-2 border-primary/20"
+              />
+            </div>
+
             <div className="p-6 md:p-8 rounded-2xl bg-primary/5 border border-primary/20 mb-8 relative overflow-hidden">
               <Quote className="absolute -top-4 -left-4 w-24 h-24 text-primary/10 rotate-180" />
               <p className="text-xl md:text-2xl font-medium text-foreground leading-relaxed relative z-10">
