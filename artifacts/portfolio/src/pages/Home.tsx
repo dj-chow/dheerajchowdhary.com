@@ -149,9 +149,9 @@ export default function Home() {
             {/* Headshot — top on mobile, right on desktop */}
             <motion.div variants={item} className="order-first md:order-last flex justify-center md:justify-end shrink-0">
               <img
-                src={`${import.meta.env.BASE_URL}images/headshot-nobg.png`}
+                src={`${import.meta.env.BASE_URL}images/headshot-final.jpeg`}
                 alt="Dheeraj Chowdhary"
-                className="w-48 h-56 md:w-72 md:h-80 object-cover object-top drop-shadow-2xl"
+                className="w-48 h-56 md:w-72 md:h-80 object-cover object-top rounded-2xl"
               />
             </motion.div>
 
