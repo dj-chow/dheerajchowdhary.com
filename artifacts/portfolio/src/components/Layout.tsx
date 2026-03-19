@@ -65,11 +65,9 @@ export default function Layout({ children }: LayoutProps) {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <Link href="/" className="group flex items-center gap-2 z-50">
-            <img
-              src={`${import.meta.env.BASE_URL}images/headshot.jpeg`}
-              alt="Dheeraj Chowdhary"
-              className="w-10 h-10 rounded-xl object-cover shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform duration-300"
-            />
+            <div className="w-10 h-10 rounded-xl bg-primary/15 flex items-center justify-center text-sm font-bold text-primary shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform duration-300">
+              DC
+            </div>
             <span className="font-semibold text-lg tracking-tight hidden sm:block">
               Dheeraj Chowdhary
             </span>
@@ -204,11 +202,9 @@ export default function Layout({ children }: LayoutProps) {
       <footer className="border-t border-border mt-20 py-12 bg-card/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-3">
-            <img
-              src={`${import.meta.env.BASE_URL}images/headshot.jpeg`}
-              alt="Dheeraj Chowdhary"
-              className="w-8 h-8 rounded-lg object-cover"
-            />
+            <div className="w-8 h-8 rounded-lg bg-primary/15 flex items-center justify-center text-xs font-bold text-primary">
+              DC
+            </div>
             <span className="font-semibold text-foreground">Dheeraj Chowdhary</span>
           </div>
           <p className="text-sm text-muted-foreground text-center md:text-left">

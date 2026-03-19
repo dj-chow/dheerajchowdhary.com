@@ -144,28 +144,49 @@ export default function Home() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div initial="hidden" animate="show" variants={container} className="max-w-3xl">
-            <motion.div variants={item} className="mb-6 flex items-center gap-3">
-              <Badge variant="outline" className="px-3 py-1 text-sm bg-primary/10 text-primary border-primary/20">
-                Senior Product Manager
-              </Badge>
+          <motion.div initial="hidden" animate="show" variants={container} className="flex flex-col md:flex-row md:items-center gap-10 md:gap-16">
+
+            {/* Headshot — top on mobile, right on desktop */}
+            <motion.div variants={item} className="order-first md:order-last flex justify-center md:justify-end shrink-0">
+              <div className="relative">
+                <div className="w-44 h-44 md:w-64 md:h-64 rounded-2xl overflow-hidden ring-2 ring-primary/30 shadow-2xl shadow-primary/20">
+                  <img
+                    src={`${import.meta.env.BASE_URL}images/headshot.jpeg`}
+                    alt="Dheeraj Chowdhary"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-3 -right-3 w-10 h-10 rounded-xl bg-primary/15 border border-primary/20 backdrop-blur-sm flex items-center justify-center">
+                  <span className="text-xs font-bold text-primary">DC</span>
+                </div>
+              </div>
             </motion.div>
 
-            <motion.h1 variants={item} className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6 text-foreground">
-              I've built products that <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">get adopted</span> in complex, regulated environments.
-            </motion.h1>
+            {/* Text block — below image on mobile, left on desktop */}
+            <div className="order-last md:order-first flex-1">
+              <motion.div variants={item} className="mb-6 flex items-center gap-3">
+                <Badge variant="outline" className="px-3 py-1 text-sm bg-primary/10 text-primary border-primary/20">
+                  Senior Product Manager
+                </Badge>
+              </motion.div>
 
-            <motion.p variants={item} className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-2xl">
-              14+ years across startups and enterprise. Currently at Bank of Montreal. Previously launched a program with Google, drove $2M+ in enterprise contracts, and co-founded a startup.
-            </motion.p>
+              <motion.h1 variants={item} className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6 text-foreground">
+                I've built products that <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">get adopted</span> in complex, regulated environments.
+              </motion.h1>
 
-            <motion.div variants={item} className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" className="rounded-xl text-base px-8 h-14 shadow-lg shadow-primary/25 hover:-translate-y-1 transition-all duration-300">
-                <a href="#case-studies" onClick={(e) => { e.preventDefault(); document.getElementById("case-studies")?.scrollIntoView({ behavior: "smooth" }); }}>
-                  View Case Studies <ArrowRight className="w-5 h-5 ml-2" />
-                </a>
-              </Button>
-            </motion.div>
+              <motion.p variants={item} className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-2xl">
+                14+ years across startups and enterprise. Currently at Bank of Montreal. Previously launched a program with Google, drove $2M+ in enterprise contracts, and co-founded a startup.
+              </motion.p>
+
+              <motion.div variants={item} className="flex flex-col sm:flex-row gap-4">
+                <Button asChild size="lg" className="rounded-xl text-base px-8 h-14 shadow-lg shadow-primary/25 hover:-translate-y-1 transition-all duration-300">
+                  <a href="#case-studies" onClick={(e) => { e.preventDefault(); document.getElementById("case-studies")?.scrollIntoView({ behavior: "smooth" }); }}>
+                    View Case Studies <ArrowRight className="w-5 h-5 ml-2" />
+                  </a>
+                </Button>
+              </motion.div>
+            </div>
+
           </motion.div>
         </div>
       </section>
