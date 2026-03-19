@@ -301,6 +301,19 @@ export default function Home() {
               <p className="text-muted-foreground leading-relaxed mb-6">
                 I take on hard problems and own the outcome. The domain: financial services, fintech, payments, or developer platforms. Companies like Wealthsimple, Shopify, or the banks I already know. I work best where the stakes are real, the environment is complex, and the team needs someone who can bridge strategy and execution without losing the thread.
               </p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 p-5 rounded-xl bg-background border border-border/50">
+                {[
+                  { category: "Product", skills: "Discovery, roadmapping, 0→1 delivery, lifecycle management, metrics design, OKRs" },
+                  { category: "Domain", skills: "Fintech, banking regulation (FRTB, Basel), edtech, enterprise SaaS, AI/NLP" },
+                  { category: "Technical", skills: "SQL, API integration, data pipelines, risk systems, NLP/AI product evaluation" },
+                  { category: "Delivery", skills: "Cross-functional alignment, stakeholder management, agile/scrum, program delivery" },
+                ].map((s) => (
+                  <div key={s.category}>
+                    <div className="text-xs font-bold tracking-widest uppercase text-primary mb-1">{s.category}</div>
+                    <div className="text-xs text-muted-foreground leading-relaxed">{s.skills}</div>
+                  </div>
+                ))}
+              </div>
               <Button asChild>
                 <a href="#case-studies" onClick={(e) => { e.preventDefault(); document.getElementById("case-studies")?.scrollIntoView({ behavior: "smooth" }); }}>
                   See the evidence <ArrowRight className="w-4 h-4 ml-2" />
