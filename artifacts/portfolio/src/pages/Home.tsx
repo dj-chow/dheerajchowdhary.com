@@ -41,6 +41,7 @@ export default function Home() {
     {
       id: "risk-platform",
       title: "Turning a Failed Pilot into a 250+ User Platform",
+      category: "Failed Pilot Turnaround",
       company: "Bank of Montreal, Risk Reporting",
       role: "Product Owner",
       hook: "Leaders were making risk calls from sheets on their phones. The first attempt to fix it failed.",
@@ -51,6 +52,7 @@ export default function Home() {
     {
       id: "frtb-program",
       title: "Resolving 10 Critical Decisions on a $20M+ Program",
+      category: "Regulatory Program",
       company: "Bank of Montreal, Regulatory Trading Programs",
       role: "Solution Architect",
       hook: "Six teams. Three years in. The hardest feature was not defined. I had to figure out what to build, not just how to ship it.",
@@ -61,6 +63,7 @@ export default function Home() {
     {
       id: "upgrad-google",
       title: "Building with Google — Then Knowing When to Stop",
+      category: "0→1 + Strategic Sunset",
       company: "$2.25B Edtech Unicorn",
       role: "Product Manager",
       hook: "I built a product from zero, partnered with Google, scaled to 5,000+ learners. Then I made the call to kill it.",
@@ -71,6 +74,7 @@ export default function Home() {
     {
       id: "nlp-assessment",
       title: "Turning AI Resistance into Enterprise Adoption",
+      category: "Enterprise AI Adoption",
       company: "AI-Powered Talent Assessment Platform",
       role: "Product Consultant",
       hook: "The client's own team was blocking the deal. They thought the AI tool was coming for their jobs.",
@@ -189,15 +193,16 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-4 divide-y sm:divide-y-0 sm:divide-x divide-border/50">
             {[
-              { metric: "60%", label: "Reduction in executive reporting requests" },
-              { metric: "250+", label: "Active users on a $50K MVP budget" },
-              { metric: "$200K/yr", label: "Annual savings from automated workflows" },
-              { metric: "5,000+", label: "Learners reached via Google partnership" },
-              { metric: "$2M+", label: "Enterprise contracts influenced" },
+              { metric: "60%", label: "Reduction in executive reporting requests", context: "Measured by the Risk team post-launch." },
+              { metric: "250+", label: "Active users on a $50K MVP budget", context: "Scaled from a failed pilot in one cycle." },
+              { metric: "$200K/yr", label: "Annual savings from automated workflows", context: "Validated by Finance, not estimated." },
+              { metric: "5,000+", label: "Learners reached via Google partnership", context: "Delivered via a direct Google partnership." },
+              { metric: "$2M+", label: "Enterprise contracts influenced", context: "Closed across Southeast Asia in 18 months." },
             ].map((stat, i, arr) => (
               <div key={i} className={`pt-6 sm:pt-0 sm:px-6 flex flex-col items-start first:pl-0 last:pr-0 ${i === arr.length - 1 ? "col-span-full sm:col-span-1" : ""}`}>
                 <div className="text-3xl font-bold text-foreground mb-1">{stat.metric}</div>
-                <div className="text-sm text-muted-foreground font-medium leading-snug">{stat.label}</div>
+                <div className="text-sm text-muted-foreground font-medium leading-snug mb-1">{stat.label}</div>
+                <div className="text-xs text-muted-foreground/60 leading-snug">{stat.context}</div>
               </div>
             ))}
           </div>
@@ -385,6 +390,9 @@ export default function Home() {
                       <span className="w-1 h-1 rounded-full bg-muted-foreground" />
                       <span className="text-xs text-muted-foreground">{c.role}</span>
                     </div>
+                    <span className="inline-block text-xs font-semibold tracking-widest uppercase text-muted-foreground border border-border/60 rounded px-2 py-0.5 mb-3">
+                      {c.category}
+                    </span>
                     <h3 className="text-xl font-bold text-foreground mb-4 leading-tight group-hover:text-primary transition-colors">
                       {c.title}
                     </h3>
