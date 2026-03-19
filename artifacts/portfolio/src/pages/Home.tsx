@@ -180,8 +180,8 @@ export default function Home() {
               { metric: "$200K/yr", label: "Annual savings from automated workflows" },
               { metric: "5,000+", label: "Learners reached via Google partnership" },
               { metric: "$2M+", label: "Enterprise contracts influenced" },
-            ].map((stat, i) => (
-              <div key={i} className="pt-6 sm:pt-0 sm:px-6 flex flex-col items-start first:pl-0 last:pr-0">
+            ].map((stat, i, arr) => (
+              <div key={i} className={`pt-6 sm:pt-0 sm:px-6 flex flex-col items-start first:pl-0 last:pr-0 ${i === arr.length - 1 ? "col-span-full sm:col-span-1" : ""}`}>
                 <div className="text-3xl font-bold text-foreground mb-1">{stat.metric}</div>
                 <div className="text-sm text-muted-foreground font-medium leading-snug">{stat.label}</div>
               </div>
@@ -319,7 +319,7 @@ export default function Home() {
                     <div>
                       <div className="text-sm font-bold text-foreground leading-tight">{v.name}</div>
                       <div className="text-xs text-muted-foreground">{v.title} · {v.company}</div>
-                      <div className="text-xs text-muted-foreground/60 mt-0.5">{v.relationship}</div>
+                      <div className="text-xs text-muted-foreground mt-0.5">{v.relationship}</div>
                     </div>
                   </div>
                   <a
@@ -374,8 +374,8 @@ export default function Home() {
                     <h3 className="text-xl font-bold text-foreground mb-4 leading-tight group-hover:text-primary transition-colors">
                       {c.title}
                     </h3>
-                    <div className="p-4 rounded-xl bg-background border border-border/50 mb-5 flex-1">
-                      <p className="text-sm font-medium italic text-muted-foreground">"{c.hook}"</p>
+                    <div className="p-5 rounded-xl bg-background border border-border/50 mb-5 flex-1">
+                      <p className="text-sm leading-relaxed italic text-muted-foreground">"{c.hook}"</p>
                     </div>
                     <div className="space-y-3 mt-auto">
                       <div className="flex flex-wrap gap-2">

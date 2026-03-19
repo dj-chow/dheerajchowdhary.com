@@ -90,7 +90,7 @@ export default function CaseStudy2() {
 
             {/* Sticky Sidebar Metrics */}
             <div className="space-y-6">
-              <div className="sticky top-32 p-6 rounded-2xl bg-card/50 border border-border/50">
+              <div className="md:sticky top-32 p-6 rounded-2xl bg-card/50 border border-border/50">
                 <h3 className="text-lg font-bold text-foreground mb-6 flex items-center gap-2">
                   <TrendingUp className="w-5 h-5 text-primary" /> Outcomes
                 </h3>
