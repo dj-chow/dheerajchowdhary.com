@@ -463,22 +463,15 @@ export default function Home() {
       <section id="contact" className="py-24 bg-background border-t border-border/50 scroll-mt-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 text-foreground">Let's Connect</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Building in fintech, financial services, or payments and need a PM who can work across strategy, regulation, and delivery? Let's talk.
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">Let's Connect</h2>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <a href="mailto:dheeraj@hey.com" className="group">
               <Card className="bg-card/50 border-border/50 hover:bg-card hover:border-primary/50 transition-all duration-300 h-full">
-                <CardContent className="p-8 flex flex-col items-center text-center gap-4">
+                <CardContent className="p-8 flex flex-col items-center justify-center">
                   <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
                     <Mail className="w-8 h-8 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-foreground mb-1">Email</h3>
-                    <p className="text-sm text-muted-foreground group-hover:text-primary transition-colors">dheeraj@hey.com</p>
                   </div>
                 </CardContent>
               </Card>
@@ -486,13 +479,9 @@ export default function Home() {
 
             <a href="https://linkedin.com/in/dheerajchowdhary" target="_blank" rel="noopener noreferrer" className="group">
               <Card className="bg-card/50 border-border/50 hover:bg-card hover:border-primary/50 transition-all duration-300 h-full">
-                <CardContent className="p-8 flex flex-col items-center text-center gap-4">
+                <CardContent className="p-8 flex flex-col items-center justify-center">
                   <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
                     <Linkedin className="w-8 h-8 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-foreground mb-1">LinkedIn</h3>
-                    <p className="text-sm text-muted-foreground group-hover:text-primary transition-colors">dheerajchowdhary</p>
                   </div>
                 </CardContent>
               </Card>
@@ -500,13 +489,9 @@ export default function Home() {
 
             <a href="https://github.com/dj-chow" target="_blank" rel="noopener noreferrer" className="group">
               <Card className="bg-card/50 border-border/50 hover:bg-card hover:border-primary/50 transition-all duration-300 h-full">
-                <CardContent className="p-8 flex flex-col items-center text-center gap-4">
+                <CardContent className="p-8 flex flex-col items-center justify-center">
                   <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
                     <Github className="w-8 h-8 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-foreground mb-1">GitHub</h3>
-                    <p className="text-sm text-muted-foreground group-hover:text-primary transition-colors">dj-chow</p>
                   </div>
                 </CardContent>
               </Card>
@@ -514,13 +499,9 @@ export default function Home() {
 
             <a href={`${import.meta.env.BASE_URL}Dheeraj_Chowdhary_Resume.pdf`} download className="group">
               <Card className="bg-card/50 border-border/50 hover:bg-card hover:border-primary/50 transition-all duration-300 h-full">
-                <CardContent className="p-8 flex flex-col items-center text-center gap-4">
+                <CardContent className="p-8 flex flex-col items-center justify-center">
                   <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
                     <FileDown className="w-8 h-8 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-foreground mb-1">Resume</h3>
-                    <p className="text-sm text-muted-foreground group-hover:text-primary transition-colors">Download PDF</p>
                   </div>
                 </CardContent>
               </Card>
