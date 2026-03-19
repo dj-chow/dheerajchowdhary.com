@@ -43,7 +43,7 @@ export default function Home() {
       title: "Turning a Failed Pilot into a 250+ User Platform",
       company: "Bank of Montreal, Risk Reporting",
       role: "Product Owner",
-      hook: "Executives were making risk decisions by squinting at spreadsheets on their phones.",
+      hook: "Leaders were making risk calls from sheets on their phones. The first attempt to fix it failed.",
       metrics: ["60% Drop in Reports", "250+ Users", "$50K MVP Budget"],
       icon: <BarChart3 className="w-8 h-8 text-primary" />,
       image: "case-study-1.png"
@@ -53,7 +53,7 @@ export default function Home() {
       title: "Resolving 10 Critical Decisions on a $20M+ Program",
       company: "Bank of Montreal, Regulatory Trading Programs",
       role: "Solution Architect",
-      hook: "Six delivery teams working in silos. Critical design decisions stalled for months.",
+      hook: "Six teams. Three years in. The hardest feature was not defined. I had to figure out what to build, not just how to ship it.",
       metrics: ["10 Core Decisions Resolved", "6 Teams Aligned", "Capital Requirements Reduced"],
       icon: <Workflow className="w-8 h-8 text-primary" />,
       image: "case-study-2.png"
@@ -63,7 +63,7 @@ export default function Home() {
       title: "Building with Google — Then Knowing When to Stop",
       company: "$2.25B Edtech Unicorn",
       role: "Product Manager",
-      hook: "Hired to build an Android Development program from a blank page.",
+      hook: "I built a product from zero, partnered with Google, scaled to 5,000+ learners. Then I made the call to kill it.",
       metrics: ["5,000+ Learners", "Google Partnership", "Data-Driven Sunset"],
       icon: <Smartphone className="w-8 h-8 text-primary" />,
       image: "case-study-3.png"

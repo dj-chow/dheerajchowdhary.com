@@ -31,7 +31,7 @@ export default function CaseStudy3() {
               Building with Google — Then Knowing When to Stop
             </h1>
             <p className="text-2xl font-medium italic text-muted-foreground border-l-4 border-primary pl-6 py-2">
-              "I was hired to build the Android Development program from a blank page."
+              "I built a product from zero, partnered with Google, scaled to 5,000+ learners. Then I made the call to kill it."
             </p>
           </header>
 
@@ -52,10 +52,10 @@ export default function CaseStudy3() {
                 </h2>
                 <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
                   <p>
-                    A $2.25B edtech unicorn wanted to launch a professional Android development program. But there was nothing there yet.
+                    A $2.25B edtech startup wanted to launch an Android dev program in India. There was no content, no mentor network, no brand deals, and no students.
                   </p>
                   <p>
-                    There was no existing curriculum, no mentor network, no brand partnerships, and no students. I was tasked to own the full product lifecycle, from initial business case all the way through go-to-market.
+                    This was a blank page. The company needed someone to figure out if this product should exist, what it should look like, and how to bring it to market.
                   </p>
                 </div>
               </div>
@@ -66,13 +66,13 @@ export default function CaseStudy3() {
                 </h2>
                 <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
                   <p>
-                    <strong>Greenfield Build:</strong> I built the business case from market research and P&L modeling. Crucially, I secured Google as a partner — making us one of only six national partners in India.
+                    <strong>Built the case:</strong> I started with market sizing and P&L modeling. Sized the target market, found the gap between free guides and paid programs, and built the case before anyone wrote a line of content.
                   </p>
                   <p>
-                    <strong>Product Ownership:</strong> I owned all product decisions: the curriculum structure, pricing, class sizes, synchronous vs. asynchronous delivery ratios, and the mentor network. I coordinated a 20-person cross-functional team across content, video production, marketing, and sales to launch.
+                    <strong>Secured Google:</strong> Built the pitch, set the terms, closed the deal. One of only six national partners. This wasn't for show. It defined our credibility, pricing power, and edge. Made every product tradeoff: content structure, pricing, cohort sizes, sync vs. async ratios, mentor criteria. Each one was a tension between scale and quality.
                   </p>
                   <p>
-                    <strong>Data-Driven Sunset:</strong> The program scaled to 5,000+ learners. However, as the market shifted, completion rates and placement outcomes began falling below our quality thresholds. Instead of pushing for vanity growth, I ran a structured post-mortem, presented the data to leadership, and recommended we sunset the product with a zero-disruption transition plan for enrolled learners.
+                    <strong>Led launch, then led the wind-down:</strong> Led a 20-person team across content, video, marketing, and sales to launch. When finish rates and job outcomes dropped below quality bars, I didn't chase vanity growth. Learner count doesn't matter if the outcome you promised isn't landing. Ran a review, showed the data to leaders, and proposed a wind-down with zero learner impact.
                   </p>
                 </div>
               </div>
@@ -97,7 +97,7 @@ export default function CaseStudy3() {
                   <CheckCircle2 className="w-6 h-6 text-primary" /> Key Takeaway
                 </h2>
                 <div className="p-6 rounded-xl bg-primary/5 border border-primary/20 text-foreground text-lg leading-relaxed font-medium">
-                  The hardest business decision is knowing when to stop something that's working but no longer strategically aligned. Product discipline means killing your own creation when the data says so.
+                  The hardest product call is when to stop. The program worked by vanity metrics, but job outcomes told another story. Killing my own product when the data said stop taught me more than building it.
                 </div>
               </div>
 
@@ -113,25 +113,25 @@ export default function CaseStudy3() {
                 <div className="space-y-6">
                   <div>
                     <div className="text-3xl font-bold text-primary mb-1">5,000+</div>
-                    <div className="text-sm font-medium text-muted-foreground">Learners reached and scaled</div>
+                    <div className="text-sm font-medium text-muted-foreground">Learners reached</div>
                   </div>
                   <div className="w-full h-px bg-border/50" />
                   
                   <div>
                     <div className="text-3xl font-bold text-primary mb-1">1 of 6</div>
-                    <div className="text-sm font-medium text-muted-foreground">Google national partnerships secured in India</div>
+                    <div className="text-sm font-medium text-muted-foreground">Google national deals in India</div>
                   </div>
                   <div className="w-full h-px bg-border/50" />
                   
                   <div>
                     <div className="text-3xl font-bold text-primary mb-1">0</div>
-                    <div className="text-sm font-medium text-muted-foreground">Learner disruption during sunset transition</div>
+                    <div className="text-sm font-medium text-muted-foreground">Learner harm during wind-down</div>
                   </div>
                   <div className="w-full h-px bg-border/50" />
                   
                   <div>
                     <div className="text-xl font-bold text-primary mb-1">Full Lifecycle</div>
-                    <div className="text-sm font-medium text-muted-foreground">Owned from 0 to 1, to scale, to sunset</div>
+                    <div className="text-sm font-medium text-muted-foreground">Zero to launch to scale to sunset</div>
                   </div>
                 </div>
               </div>

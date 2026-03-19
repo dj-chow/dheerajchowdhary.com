@@ -31,7 +31,7 @@ export default function CaseStudy2() {
               Resolving 10 Critical Decisions on a $20M+ Program
             </h1>
             <p className="text-2xl font-medium italic text-muted-foreground border-l-4 border-primary pl-6 py-2">
-              "I stepped into the third year of a high-stakes program where features were built in silos and critical decisions were unresolved across six teams."
+              "Six teams. Three years in. The hardest feature was not defined. I had to figure out what to build, not just how to ship it."
             </p>
           </header>
 
@@ -52,10 +52,10 @@ export default function CaseStudy2() {
                 </h2>
                 <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
                   <p>
-                    The FRTB (Fundamental Review of the Trading Book) program was a massive, multi-year regulatory initiative. By year three, the delivery momentum had fractured.
+                    The FRTB program was a $20M+ multi-year rule-driven push at a major bank. By year three, delivery had broken apart. Six teams worked in silos with competing goals.
                   </p>
                   <p>
-                    Six delivery teams were working in silos with competing priorities. Critical architectural and product design decisions had been stalled. The most complex feature — expanding trade decomposition from single-layer to multi-layer instruments (funds of funds) — was completely undefined and holding up compliance.
+                    The hardest problem: growing trade breakdown from one layer to many layers. Nobody had defined what this feature needed to do. Without it, the bank's capital costs were bloated. It was a "what to build" problem that nobody owned.
                   </p>
                 </div>
               </div>
@@ -66,13 +66,13 @@ export default function CaseStudy2() {
                 </h2>
                 <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
                   <p>
-                    <strong>Built Coalitions:</strong> I replaced the siloed decision-making process with Joint Analysis and Design (JAD) sessions, forcing all affected parties — front office, risk, and tech — into the same room to hash out dependencies.
+                    Teams weren't clashing over fixes. They clashed because nobody had defined what the product needed to do. My first move was to own the spec, not the process. I sat with traders, traced data flows end-to-end, and turned user reality into product needs for all six teams.
                   </p>
                   <p>
-                    <strong>Authored the Specs:</strong> For the complex trade decomposition feature, I embedded directly with front office users. I traced the data flows end-to-end as a newcomer, learned their workflows, and translated that reality into execution specs for all six delivery teams.
+                    <strong>Forced shared clarity:</strong> I replaced siloed calls with joint design sessions. Tracing data flows gave all teams the same source of truth.
                   </p>
                   <p>
-                    <strong>Drove the Design Authority:</strong> I held the pen on cross-functional decisions, leading 10 critical submissions through the Design Authority. I treated every dependency conversation as a coordination win, not an escalation.
+                    <strong>Led 10 design reviews:</strong> In regulated settings, rules aren't overhead. Each review was a product call with an audit trail: data ownership, method, reporting order, pros and cons, and a pick to defend. I used it as the tool to resolve gray areas.
                   </p>
                 </div>
               </div>
@@ -82,7 +82,7 @@ export default function CaseStudy2() {
                   <CheckCircle2 className="w-6 h-6 text-primary" /> Key Takeaway
                 </h2>
                 <div className="p-6 rounded-xl bg-primary/5 border border-primary/20 text-foreground text-lg leading-relaxed font-medium">
-                  Adversarial relationships between teams are almost always a process failure, not a people failure. Give people a shared forum and a shared definition of done, and the dynamic shifts.
+                  The highest-value PM skill in a large program is stating the problem clearly enough that shared views become possible. Once I wrote the spec from the user's side, the "politics" resolved on their own.
                 </div>
               </div>
 
@@ -98,25 +98,25 @@ export default function CaseStudy2() {
                 <div className="space-y-6">
                   <div>
                     <div className="text-3xl font-bold text-primary mb-1">10</div>
-                    <div className="text-sm font-medium text-muted-foreground">Critical Design Authority decisions resolved</div>
+                    <div className="text-sm font-medium text-muted-foreground">Key design calls resolved</div>
                   </div>
                   <div className="w-full h-px bg-border/50" />
                   
                   <div>
                     <div className="text-3xl font-bold text-primary mb-1">6</div>
-                    <div className="text-sm font-medium text-muted-foreground">Delivery teams aligned across silos</div>
+                    <div className="text-sm font-medium text-muted-foreground">Siloed teams aligned</div>
                   </div>
                   <div className="w-full h-px bg-border/50" />
                   
                   <div>
                     <div className="text-3xl font-bold text-primary mb-1">Capital</div>
-                    <div className="text-sm font-medium text-muted-foreground">Requirements reduced via trade decomposition</div>
+                    <div className="text-sm font-medium text-muted-foreground">Costs cut via trade breakdown feature</div>
                   </div>
                   <div className="w-full h-px bg-border/50" />
                   
                   <div>
                     <div className="text-3xl font-bold text-primary mb-1">Pass</div>
-                    <div className="text-sm font-medium text-muted-foreground">Satisfactory enterprise compliance rating</div>
+                    <div className="text-sm font-medium text-muted-foreground">Full rating achieved</div>
                   </div>
                 </div>
               </div>

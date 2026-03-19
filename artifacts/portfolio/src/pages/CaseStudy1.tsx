@@ -31,7 +31,7 @@ export default function CaseStudy1() {
               Turning a Failed Pilot into a 250+ User Risk Platform
             </h1>
             <p className="text-2xl font-medium italic text-muted-foreground border-l-4 border-primary pl-6 py-2">
-              "Executives were making risk decisions by squinting at spreadsheets on their phones."
+              "Leaders were making risk calls from sheets on their phones. The first attempt to fix it failed."
             </p>
           </header>
 
@@ -52,10 +52,10 @@ export default function CaseStudy1() {
                 </h2>
                 <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
                   <p>
-                    The risk governance team was producing reports manually. Executives reviewed critical risk data on spreadsheets from their phones between meetings.
+                    The risk team built reports by hand. Leaders checked key data on phones between meetings. A prior pilot had failed fully.
                   </p>
                   <p>
-                    The first automation pilot had completely failed. Not because the technology was wrong, but because executives resisted a tool that would surface issues they'd immediately have to defend in governance meetings. I was given a blank page, a senior developer, and a mandate to fix it.
+                    But it wasn't just a tech failure. The tool was built to speed up old work, not solve the problem users had. I was given a blank page, one developer, and $50K.
                   </p>
                 </div>
               </div>
@@ -66,13 +66,13 @@ export default function CaseStudy1() {
                 </h2>
                 <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
                   <p>
-                    Instead of just writing specs for a dashboard, I ran persona-based discovery across both governance analysts and the executives. I found completely different pain points: analysts wanted to stop chasing data, while executives feared visible accountability without context.
+                    A better version of the wrong product is still wrong. Instead of rebuilding, I started over with people. Ran research with analysts and leaders. Found two pain points: analysts wanted to stop chasing data, and leaders feared red flags they couldn't defend.
                   </p>
                   <p>
-                    <strong>Designed for actual behavior:</strong> We redesigned it as a self-serve portal with transparent risk thresholds. KRI (Key Risk Indicator) breaches were shown in red at the top, immediately visible for executives scanning phones. Crucially, we allowed ops analysts to input commentary against flagged items <em>before</em> the executives saw them, eliminating the fear of undefendable red flags.
+                    <strong>Built for real behavior:</strong> Leaders checked breach status on their phones, scanning only for problems. So I built breach status as the top view, mobile-first. Analyst notes sat below so every flag had context before a leader saw it.
                   </p>
                   <p>
-                    <strong>Shipped under constraints:</strong> We shipped the MVP with just a two-person team (myself and a senior dev) on a strict $50K budget. I validated the flow with early adopter champions before scaling it to 250+ users across the enterprise.
+                    <strong>Shipped under constraints:</strong> People wanted custom views, but a 2-person team couldn't maintain those. I said no and built self-serve dashboards instead. Adoption over custom work. Tested with early fans before scaling to the full org.
                   </p>
                 </div>
               </div>
@@ -97,7 +97,7 @@ export default function CaseStudy1() {
                   <CheckCircle2 className="w-6 h-6 text-primary" /> Key Takeaway
                 </h2>
                 <div className="p-6 rounded-xl bg-primary/5 border border-primary/20 text-foreground text-lg leading-relaxed font-medium">
-                  The technical solution was only 30% of the battle. The other 70% was about changing the culture and workflow. The stated problem is almost never the real problem.
+                  The stated problem is almost never the real one. The first pilot failed because nobody saw the fear behind the push-back. Once I found that, the product built itself. Discovery isn't just a phase, it's the job.
                 </div>
               </div>
 
@@ -113,13 +113,13 @@ export default function CaseStudy1() {
                 <div className="space-y-6">
                   <div>
                     <div className="text-3xl font-bold text-primary mb-1">60%</div>
-                    <div className="text-sm font-medium text-muted-foreground">Reduction in executive reporting requests</div>
+                    <div className="text-sm font-medium text-muted-foreground">Fewer reporting requests</div>
                   </div>
                   <div className="w-full h-px bg-border/50" />
                   
                   <div>
                     <div className="text-3xl font-bold text-primary mb-1">250+</div>
-                    <div className="text-sm font-medium text-muted-foreground">Active platform users across risk & compliance</div>
+                    <div className="text-sm font-medium text-muted-foreground">Active users across risk teams</div>
                   </div>
                   <div className="w-full h-px bg-border/50" />
                   
@@ -131,13 +131,13 @@ export default function CaseStudy1() {
                   
                   <div>
                     <div className="text-3xl font-bold text-primary mb-1">$200K/yr</div>
-                    <div className="text-sm font-medium text-muted-foreground">Freed (~0.5 FTE per business line)</div>
+                    <div className="text-sm font-medium text-muted-foreground">Freed in manual effort</div>
                   </div>
                   <div className="w-full h-px bg-border/50" />
                   
                   <div>
                     <div className="text-3xl font-bold text-primary mb-1">50%</div>
-                    <div className="text-sm font-medium text-muted-foreground">Reduction in BAU support requests</div>
+                    <div className="text-sm font-medium text-muted-foreground">Drop in support requests</div>
                   </div>
                 </div>
               </div>

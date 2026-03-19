@@ -53,13 +53,13 @@ export default function CaseStudy4() {
                 </h2>
                 <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
                   <p>
-                    The product was an NLP-based talent assessment tool. It was technically strong. The POC results were solid. But deals kept stalling.
+                    The product was an NLP-based talent review tool. Strong on the tech side. POC results were solid. But large deals kept stalling across Southeast Asia.
                   </p>
                   <p>
-                    The blocker was not the technology and not the buyer. It was the client's own operations team. They were the people who ran manual candidate screening today. They saw the AI tool as a direct threat to their jobs. So they made themselves unavailable, raised every objection they could, and quietly killed the POC from inside.
+                    The blocker was the client's ops team. They ran manual screening. They saw the AI tool as a direct threat to their jobs. They dodged meetings, raised every concern they could, and quietly killed POCs from inside.
                   </p>
                   <p>
-                    At the time, "AI resistance" was not a common phrase. But the pattern was already there. And it had nothing to do with the product.
+                    At the time, "AI pushback" wasn't a phrase anyone used. But the pattern was there.
                   </p>
                 </div>
               </div>
@@ -70,13 +70,10 @@ export default function CaseStudy4() {
                 </h2>
                 <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
                   <p>
-                    I embedded on-site at the first client account. Not to demo the product. To understand the people who were blocking it.
+                    I went on-site at the first client to learn why people were blocking it.
                   </p>
                   <p>
-                    I had informal conversations with the ops team members. The fear was consistent: this tool screens candidates automatically, so what do we do? The product was being marketed as "automated assessment." That word — automated — confirmed everything they were afraid of.
-                  </p>
-                  <p>
-                    The problem was not a feature gap. It was a messaging problem that had become a trust problem.
+                    Informal talks with the ops team surfaced a theme. "This tool screens people on its own, so what do we do?" The word "automated" in every piece of our content confirmed what they feared. It was a messaging problem that had become a trust problem.
                   </p>
                 </div>
               </div>
@@ -87,13 +84,10 @@ export default function CaseStudy4() {
                 </h2>
                 <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
                   <p>
-                    I reframed the product. Not "automated assessment" — "expert copilot." The new message was simple: the tool handles the repetitive screening. You handle the judgment. Your value goes up, not down.
+                    Reframed the whole pitch from "automated screening" to "expert copilot." New message: the tool handles repeat work, you handle judgment. Your value goes up, not down.
                   </p>
                   <p>
-                    We redesigned the onboarding experience and the sales narrative around this frame. Every piece of material that mentioned "automation" was rewritten. We also changed who we talked to first: instead of going around the ops team, we brought the most resistant team members into the beta process. We gave them ownership of the rollout inside their account.
-                  </p>
-                  <p>
-                    The people who had been blocking the deal became the people championing it internally.
+                    Rewrote all sales and setup materials. Changed how we sold: instead of going around the ops team, brought the most resistant members into the beta. Gave them ownership of the internal rollout. The people blocking the deal became the people pushing it forward.
                   </p>
                 </div>
               </div>
@@ -118,7 +112,7 @@ export default function CaseStudy4() {
                   <CheckCircle2 className="w-6 h-6 text-primary" /> Key Takeaway
                 </h2>
                 <div className="p-6 rounded-xl bg-primary/5 border border-primary/20 text-foreground text-lg leading-relaxed font-medium">
-                  AI adoption fails when people feel replaced. The PM job is not to dismiss that fear. It is to understand it, redesign the message around it, and sometimes redesign the product too. This pattern hasn't changed. It's just affecting more products now.
+                  I learned this in 2012, before "AI pushback" was a phrase. Every product I've touched since follows the same rule: if the people closest to the work feel replaced, they will kill your product from inside. The fix wasn't technical. It was framing and trust.
                 </div>
               </div>
 
@@ -133,7 +127,7 @@ export default function CaseStudy4() {
                 <div className="space-y-6">
                   <div>
                     <div className="text-3xl font-bold text-primary mb-1">$2M+</div>
-                    <div className="text-sm font-medium text-muted-foreground">Enterprise contracts across Southeast Asia</div>
+                    <div className="text-sm font-medium text-muted-foreground">Large contracts across Southeast Asia</div>
                   </div>
                   <div className="w-full h-px bg-border/50" />
 
@@ -145,7 +139,7 @@ export default function CaseStudy4() {
 
                   <div>
                     <div className="text-3xl font-bold text-primary mb-1">2012</div>
-                    <div className="text-sm font-medium text-muted-foreground">AI resistance navigation — before it was a mainstream PM problem</div>
+                    <div className="text-sm font-medium text-muted-foreground">AI pushback navigation, before it was a mainstream PM problem</div>
                   </div>
                   <div className="w-full h-px bg-border/50" />
 
