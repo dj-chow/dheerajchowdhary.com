@@ -149,11 +149,11 @@ export default function Home() {
             {/* Headshot — top on mobile, right on desktop */}
             <motion.div variants={item} className="order-first md:order-last flex justify-center md:justify-end shrink-0">
               <div className="relative">
-                <div className="w-44 h-44 md:w-64 md:h-64 rounded-2xl overflow-hidden ring-2 ring-primary/30 shadow-2xl shadow-primary/20">
+                <div className="w-44 h-44 md:w-64 md:h-64 ring-2 ring-primary/30 shadow-2xl shadow-primary/20 rounded-2xl">
                   <img
                     src={`${import.meta.env.BASE_URL}images/headshot.jpeg`}
                     alt="Dheeraj Chowdhary"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top rounded-2xl"
                   />
                 </div>
                 <div className="absolute -bottom-3 -right-3 w-10 h-10 rounded-xl bg-primary/15 border border-primary/20 backdrop-blur-sm flex items-center justify-center">
