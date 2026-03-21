@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useDocumentMeta } from "@/hooks/useDocumentMeta";
+import { WordMaze } from "@/components/WordMaze";
 
 export default function Home() {
   useDocumentMeta({
@@ -137,7 +138,7 @@ export default function Home() {
     <div className="w-full">
 
       {/* ── Hero ─────────────────────────────────────── */}
-      <section className="relative pt-24 pb-32 overflow-hidden">
+      <section className="relative pt-16 sm:pt-24 pb-32 overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-background">
           <img
             src={`${import.meta.env.BASE_URL}images/hero-bg.png`}
@@ -150,29 +151,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div initial="hidden" animate="show" variants={container} className="flex flex-col md:flex-row md:items-center gap-10 md:gap-16">
 
-            {/* Headshot — top on mobile, right on desktop */}
-            <motion.div variants={item} className="order-first md:order-last flex justify-center md:justify-end shrink-0">
-              <img
-                src={`${import.meta.env.BASE_URL}images/headshot-final.jpeg`}
-                alt="Dheeraj Chowdhary"
-                className="w-48 h-56 md:w-72 md:h-80 object-cover object-top rounded-2xl"
-              />
-            </motion.div>
-
-            {/* Text block — below image on mobile, left on desktop */}
-            <div className="order-last md:order-first flex-1">
-              <motion.div variants={item} className="mb-6 flex items-center gap-3">
-                <Badge variant="outline" className="px-3 py-1 text-sm bg-primary/10 text-primary border-primary/20">
-                  Senior Product Manager
-                </Badge>
-              </motion.div>
-
-              <motion.h1 variants={item} className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6 text-foreground">
-                I've built products that <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">get adopted</span> in complex, regulated environments.
-              </motion.h1>
+            {/* Word maze — left on desktop, top on mobile */}
+            <motion.div variants={item} className="flex-1 order-last md:order-first">
+              <div className="mb-8">
+                <WordMaze />
+              </div>
 
               <motion.p variants={item} className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-2xl">
-                14+ years across startups and enterprise. Currently at Bank of Montreal. Previously launched a program with Google, drove $2M+ in enterprise contracts, and co-founded a startup.
+                14 years across startups and enterprise banking. Currently at BMO. Previously built with Google, drove $2M+ in contracts, co-founded a startup.
               </motion.p>
 
               <motion.div variants={item} className="flex flex-col sm:flex-row gap-4">
@@ -182,7 +168,16 @@ export default function Home() {
                   </a>
                 </Button>
               </motion.div>
-            </div>
+            </motion.div>
+
+            {/* Headshot — right on desktop, top on mobile */}
+            <motion.div variants={item} className="order-first md:order-last flex justify-center md:justify-end shrink-0">
+              <img
+                src={`${import.meta.env.BASE_URL}images/headshot-final.jpeg`}
+                alt="Dheeraj Chowdhary"
+                className="w-48 h-56 md:w-72 md:h-80 object-cover object-top rounded-2xl"
+              />
+            </motion.div>
 
           </motion.div>
         </div>
