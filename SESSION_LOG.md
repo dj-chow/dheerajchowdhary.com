@@ -2,6 +2,46 @@
 *Reverse chronological — newest entries at top.*
 
 ---
+## [2026-03-20 20:00] — Hero word maze, CLAUDE.md, headshot audit
+
+**Project:** dheerajchowdhary.com
+**Duration:** Extended
+
+### Decisions
+- Replace word cloud with crossword-style word maze (Option A: static hand-built layout, not algorithmic)
+- Final 8 words: PLATFORM, RISK, ADOPTION, DATA, STRATEGY, ROADMAP, GROWTH, ENTERPRISE
+- Words selected by cross-referencing existing word cloud with frequency analysis across 8 JDs from target companies (Affirm, BMO, Stripe, GitLab, Lyft)
+- ADOPTION is the center highlighted word (gradient styling)
+- Layout: 5 horizontal + 3 vertical words, 8 letter intersections, PLATFORM and STRATEGY as structural pillars
+- Headshot: no-bg version (headshot-nobg.png) rejected. Looked AI-generated on dark background. Back-burnered until Replit credits return. Will try border/shadow treatment (Option C) with live preview.
+- Created CLAUDE.md in repo root with stack, structure, conventions, and project slug
+
+### Open Questions
+- How does the word maze render on the actual site? Needs live preview (PR #2 not merged yet)
+- Headshot treatment: border/shadow approach needs visual testing
+
+### Follow-ups
+- [ ] Preview word maze in Replit and merge PR #2
+- [ ] Headshot styling (border/shadow treatment) — needs live preview, back-burnered
+- [ ] Migrate to Netlify (would unblock preview problem, free auto-deploy)
+- [ ] Case study video pilot (storyboarding/handwritten-note style)
+
+### What I Learned
+- RISK is the hardest word to place in a crossword with these 8 words. It shares very few letters with the others (only R, I, S are common). Ended up crossing ENTERPRISE at S as the only viable intersection.
+- Job descriptions across Affirm, BMO, Stripe, GitLab, and Lyft all converge on the same PM keywords: strategy, roadmap, metrics, scale, platform, growth. Domain-specific terms (payments, compliance) vary by company.
+
+### Artifacts
+- [Created] `CLAUDE.md` — project-level instructions with stack, structure, conventions, project slug
+- [Created] `artifacts/portfolio/src/config/wordmaze.ts` — crossword grid coordinates for 8 words
+- [Created] `artifacts/portfolio/src/components/WordMaze.tsx` — CSS Grid crossword renderer with Framer Motion animation
+- [Modified] `artifacts/portfolio/src/pages/Home.tsx` — swapped word cloud for WordMaze component
+- [Created] `~/.claude/projects/.../memory/feedback_headshot_nobg.md` — no-bg headshot looks AI-generated, don't use
+- [Modified] PR #2 title/description updated to reflect word maze (was "word cloud")
+
+### Context
+PR #2 is open on `hero-wordcloud` branch with 3 commits: original word cloud, session log, and word maze replacement. The maze replaces the word cloud entirely. Live site still shows the old headline layout since PR #2 hasn't been merged. User is out of Replit credits so can't preview yet. Netlify migration would solve the preview bottleneck. The old wordcloud.ts config file still exists in the repo but is no longer imported.
+
+---
 ## [2026-03-19 18:00] — Portfolio audit reconciliation, headshot integration, hero redesign, Git workflow
 
 **Project:** dheerajchowdhary.com

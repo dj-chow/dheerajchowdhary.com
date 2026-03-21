@@ -1,5 +1,8 @@
 # CLAUDE.md — dheerajchowdhary.com
 
+## Project Slug
+dheerajchowdhary-com
+
 ## What This Is
 Personal portfolio site for Dheeraj Chowdhary. Static React SPA, no backend.
 
