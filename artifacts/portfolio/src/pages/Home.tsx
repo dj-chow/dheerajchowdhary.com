@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useDocumentMeta } from "@/hooks/useDocumentMeta";
-import { wordCloudKeywords } from "@/config/wordcloud";
+import { WordMaze } from "@/components/WordMaze";
 
 export default function Home() {
   useDocumentMeta({
@@ -151,30 +151,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div initial="hidden" animate="show" variants={container} className="flex flex-col md:flex-row md:items-center gap-10 md:gap-16">
 
-            {/* Word cloud — left on desktop, top on mobile */}
+            {/* Word maze — left on desktop, top on mobile */}
             <motion.div variants={item} className="flex-1 order-last md:order-first">
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-8" aria-label="Key skills and domains">
-                {wordCloudKeywords.map((kw) => {
-                  const sizeClass = {
-                    xl: "text-5xl sm:text-6xl lg:text-7xl font-bold",
-                    lg: "text-3xl sm:text-4xl font-bold",
-                    md: "text-2xl sm:text-3xl font-semibold",
-                    sm: "text-xl sm:text-2xl font-semibold",
-                  }[kw.size];
-                  const opacity = kw.opacity ?? 100;
-                  const colorClass = kw.highlight
-                    ? `text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400`
-                    : "";
-                  return (
-                    <span
-                      key={kw.word}
-                      className={`${sizeClass} ${colorClass}`}
-                      style={kw.highlight ? undefined : { color: `hsl(var(--foreground) / ${opacity / 100})` }}
-                    >
-                      {kw.word}
-                    </span>
-                  );
-                })}
+              <div className="mb-8">
+                <WordMaze />
               </div>
 
               <motion.p variants={item} className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-2xl">
